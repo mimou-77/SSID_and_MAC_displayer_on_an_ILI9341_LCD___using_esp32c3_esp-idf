@@ -1,0 +1,2 @@
+source /home/mariem/AP_displayer/build/gdbinit/symbols
+source /home/mariem/AP_displayer/build/gdbinit/connect

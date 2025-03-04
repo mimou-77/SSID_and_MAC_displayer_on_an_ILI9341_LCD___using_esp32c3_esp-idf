@@ -1,0 +1,7 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=0 /home/mariem/AP_displayer
+-- Minimal build - ON
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32c3
+Invalid field "dependencies:idf": Unknown fields "esp_lcd_ili9341,lvgl/lvgl" under "dependencies" field that may affect build result
+-- Configuring incomplete, errors occurred!

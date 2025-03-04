@@ -1,0 +1,6 @@
+Command: ninja all
+CMake Error at CMakeLists.txt:3 (cmake_minimum_required):
+  CMake 5.0 or higher is required.  You are running version 3.28.3
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

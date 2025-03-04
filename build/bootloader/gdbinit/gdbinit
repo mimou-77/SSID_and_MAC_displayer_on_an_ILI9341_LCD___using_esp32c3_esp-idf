@@ -1,0 +1,2 @@
+source /home/mariem/AP_displayer/build/bootloader/gdbinit/symbols
+source /home/mariem/AP_displayer/build/bootloader/gdbinit/connect

@@ -1,0 +1,46 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/mariem/AP_displayer/build/bootloader/esp-idf/esptool_py && /home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/mariem/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/mariem/AP_displayer/build/bootloader/bootloader.bin
+Bootloader binary size 0x5230 bytes. 0x2dd0 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/display_driver.c.obj
+/home/mariem/AP_displayer/main/display_driver.c: In function 'display_init':
+/home/mariem/AP_displayer/main/display_driver.c:44:26: warning: initialized field overwritten [-Woverride-init]
+   44 | #define LCD_GPIO_RST     (GPIO_NUM_4)
+      |                          ^
+/home/mariem/AP_displayer/main/display_driver.c:211:27: note: in expansion of macro 'LCD_GPIO_RST'
+  211 |         .reset_gpio_num = LCD_GPIO_RST,
+      |                           ^~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.c:44:26: note: (near initialization for 'panel_config.reset_gpio_num')
+   44 | #define LCD_GPIO_RST     (GPIO_NUM_4)
+      |                          ^
+/home/mariem/AP_displayer/main/display_driver.c:211:27: note: in expansion of macro 'LCD_GPIO_RST'
+  211 |         .reset_gpio_num = LCD_GPIO_RST,
+      |                           ^~~~~~~~~~~~
+In file included from /home/mariem/esp-idf/components/esp_lcd/include/esp_lcd_panel_io.h:10,
+                 from /home/mariem/AP_displayer/main/display_driver.h:17,
+                 from /home/mariem/AP_displayer/main/display_driver.c:1:
+/home/mariem/esp-idf/components/esp_lcd/include/esp_lcd_types.h:47:28: warning: initialized field overwritten [-Woverride-init]
+   47 | #define LCD_RGB_ENDIAN_BGR (lcd_color_rgb_endian_t)LCD_RGB_ELEMENT_ORDER_BGR
+      |                            ^
+/home/mariem/AP_displayer/main/display_driver.c:212:23: note: in expansion of macro 'LCD_RGB_ENDIAN_BGR'
+  212 |         .rgb_endian = LCD_RGB_ENDIAN_BGR,
+      |                       ^~~~~~~~~~~~~~~~~~
+/home/mariem/esp-idf/components/esp_lcd/include/esp_lcd_types.h:47:28: note: (near initialization for 'panel_config.<anonymous>.rgb_endian')
+   47 | #define LCD_RGB_ENDIAN_BGR (lcd_color_rgb_endian_t)LCD_RGB_ELEMENT_ORDER_BGR
+      |                            ^
+/home/mariem/AP_displayer/main/display_driver.c:212:23: note: in expansion of macro 'LCD_RGB_ENDIAN_BGR'
+  212 |         .rgb_endian = LCD_RGB_ENDIAN_BGR,
+      |                       ^~~~~~~~~~~~~~~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable AP_displayer.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.9.dev4
+Creating esp32c3 image...
+Merged 3 ELF sections
+Successfully created esp32c3 image.
+Generated /home/mariem/AP_displayer/build/AP_displayer.bin
+[9/9] cd /home/mariem/AP_displayer/build/esp-idf/esptool_py && /home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/mariem/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/mariem/AP_displayer/build/partition_table/partition-table.bin /home/mariem/AP_displayer/build/AP_displayer.bin
+AP_displayer.bin binary size 0x930a0 bytes. Smallest app partition is 0x177000 bytes. 0xe3f60 bytes (61%) free.
