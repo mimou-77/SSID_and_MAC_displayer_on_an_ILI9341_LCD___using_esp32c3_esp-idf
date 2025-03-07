@@ -7,7 +7,9 @@
 
  
 static const char * TAG = "main";
- 
+
+extern uint8_t * supla_device_ssid ;
+extern char supla_device_mac[18] ;
  
 
 void app_main(void)
@@ -25,6 +27,8 @@ void app_main(void)
     }
 
     wifi_scan();
+    
+    ESP_LOGI(TAG, "from main: ssid = %s", supla_device_ssid);
     
     
 

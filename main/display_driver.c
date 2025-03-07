@@ -60,6 +60,9 @@ static const char *TAG = "display_driver";
 
 static _lock_t lvgl_api_lock; //lvgl APIs will br called from different tasks => mutex ; before every lvgl API call: aquire lock 
 
+extern uint8_t * supla_device_ssid ;
+extern char supla_device_mac[18] ;
+
 
 // /*******************************************************
 //  *                functions implementations
@@ -170,7 +173,7 @@ static void lvgl_port_task(void * arg)
 }
 
 
-void display_init(char * ssid, char * mac)
+void display_init()
 {
     ESP_LOGI(TAG, "config bl pin");
     gpio_config_t bl_config =
@@ -266,33 +269,25 @@ void display_init(char * ssid, char * mac)
     //ui
     ESP_LOGI(TAG, "start ui ");
     _lock_acquire(&lvgl_api_lock); //start ui
+
+
+
+    //ui
     
-    lv_obj_t *scr = lv_screen_active();
     lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003a57), LV_PART_MAIN);
 
     //label
     lv_obj_t *label = lv_label_create(lv_screen_active());
     
-    // lv_label_set_text(label, "somef_2025");
-    const char * ss = ssid;
-    lv_label_set_text(label, ss);
-    
+    const char * s = (char *) supla_device_ssid;
+    lv_label_set_text(label, s);
     lv_obj_set_style_text_color(label, lv_color_hex(0xffffff), LV_PART_MAIN);
-    lv_obj_align(label, LV_ALIGN_CENTER, 0, -0);
+    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_width(label, LCD_H_RES);
+    lv_obj_set_style_text_align(label, LV_TEXT_ALIGN_CENTER, 0);
 
-    // lv_obj_t *label_ssid = lv_label_create(scr);
-    // lv_obj_set_width(label, LCD_H_RES);
-    // lv_obj_set_style_text_align(label, LV_TEXT_ALIGN_CENTER, 0);
-    // lv_obj_t *label_mac = lv_label_create(scr);
-    // lv_obj_set_width(label, LCD_H_RES);
-    // lv_obj_set_style_text_align(label, LV_TEXT_ALIGN_CENTER, 0);
-    // lv_obj_align_to(label_mac, label_ssid,LV_ALIGN_CENTER, 0, 40 );
+    
 
-    // const char * ssid_text = (char *)(supla_ssid_mac.supla_device_ssid);    
-    // const char * mac_text = (char *)(supla_ssid_mac.supla_device_mac);
-
-    // lv_label_set_text(label_ssid, ssid_text);
-    // lv_label_set_text(label_mac, mac_text);
 
     _lock_release(&lvgl_api_lock); //end ui
 }

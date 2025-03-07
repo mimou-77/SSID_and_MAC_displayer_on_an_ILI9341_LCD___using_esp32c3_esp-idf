@@ -34,7 +34,7 @@ static void lvgl_port_update_callback(lv_display_t *disp);
 static void increase_lvgl_tick(void * arg);
 static void lvgl_port_task(void * arg);
 
-void display_init(char * ssid, char * mac);
+void display_init();
 
 
 
