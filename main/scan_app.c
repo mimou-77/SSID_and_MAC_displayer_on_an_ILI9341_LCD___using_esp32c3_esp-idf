@@ -13,8 +13,6 @@
  *******************************************************/
 static const char *TAG = "scan_app";
 
-extern uint8_t * supla_device_ssid ;
-extern char supla_device_mac[18] ;
 
 
 

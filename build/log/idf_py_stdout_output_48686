@@ -1,109 +1,42 @@
-Command: /home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/mariem/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mariem/AP_displayer/build/AP_displayer.elf /home/mariem/AP_displayer/build/bootloader/bootloader.elf -m '/home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/mariem/esp-idf/tools/idf.py'
-[0;32mI (143) esp_image: segment 1: paddr=00062240 vaddr=3fc95c00 size=02fb0h ( 12208) load[0m
-[0;32mI (146) esp_image: segment 2: paddr=000�ESP-ROM:esp32c3-api1-20210207[0m
-Build:Feb  7 2021
-rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
-SPIWP:0xee
-mode:DIO, clock div:1
-load:0x3fcd5820,len:0x15b8
-load:0x403cc710,len:0xc30
-load:0x403ce710,len:0x2fe8
-entry 0x403cc71a
-[0;32mI (30) boot: ESP-IDF v5.5-dev-1655-gc5865270b5 2nd stage bootloader[0m
-[0;32mI (30) boot: compile time Mar  3 2025 13:32:44[0m
-[0;32mI (30) boot: chip revision: v0.3[0m
-[0;32mI (32) boot: efuse block revision: v1.2[0m
-[0;32mI (36) boot.esp32c3: SPI Speed      : 80MHz[0m
-[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
-[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
-[0;32mI (47) boot: Enabling RNG early entropy source...[0m
-[0;32mI (51) boot: Partition Table:[0m
-[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00177000[0m
-[0;32mI (80) boot: End of partition table[0m
-[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=52218h (336408) map[0m
-[0;32mI (143) esp_image: segment 1: paddr=00062240 vaddr=3fc95c00 size=02fb0h ( 12208) load[0m
-[0;32mI (146) esp_image: segment 2: paddr=000651f8 vaddr=40380000 size=0ae20h ( 44576) load[0m
-[0;32mI (155) esp_image: segment 3: paddr=00070020 vaddr=42000020 size=cdb80h (842624) map[0m
-[0;32mI (287) esp_image: segment 4: paddr=0013dba8 vaddr=4038ae20 size=0abd8h ( 43992) load[0m
-[0;32mI (295) esp_image: segment 5: paddr=00148788 vaddr=50000000 size=0001ch (    28) load[0m
-[0;32mI (301) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (302) boot: Disabling RNG early entropy source...[0m
-[0;32mI (313) cpu_start: Unicore app[0m
-[0;32mI (321) cpu_start: Pro cpu start user code[0m
-[0;32mI (321) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (322) app_init: Application information:[0m
-[0;32mI (322) app_init: Project name:     AP_displayer[0m
-[0;32mI (326) app_init: App version:      1[0m
-[0;32mI (329) app_init: Compile time:     Mar  4 2025 11:22:27[0m
-[0;32mI (334) app_init: ELF file SHA256:  d3a02e6f9...[0m
-[0;32mI (339) app_init: ESP-IDF:          v5.5-dev-1655-gc5865270b5-dirty[0m
-[0;32mI (345) efuse_init: Min chip rev:     v0.3[0m
-[0;32mI (348) efuse_init: Max chip rev:     v1.99 [0m
-[0;32mI (352) efuse_init: Chip rev:         v0.3[0m
-[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (363) heap_init: At 3FCAD180 len 00012E80 (75 KiB): RAM[0m
-[0;32mI (368) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
-[0;32mI (374) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
-[0;32mI (380) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
-[0;32mI (386) spi_flash: detected chip: generic[0m
-[0;32mI (389) spi_flash: flash io: dio[0m
-[0;33mW (392) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (404) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
-[0;32mI (410) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
-[0;32mI (417) main_task: Started on CPU0[0m
-[0;32mI (427) main_task: Calling app_main()[0m
-[0;32mI (437) pp: pp rom version: 9387209[0m
-[0;32mI (437) net80211: net80211 rom version: 9387209[0m
-[0;32mI (447) wifi:wifi driver task: 3fcb5b54, prio:23, stack:6656, core=0[0m
-[0;32mI (447) wifi:wifi firmware version: 090f94a[0m
-[0;32mI (447) wifi:wifi certification version: v7.0[0m
-[0;32mI (447) wifi:config NVS flash: enabled[0m
-[0;32mI (457) wifi:config nano formatting: disabled[0m
-[0;32mI (457) wifi:Init data frame dynamic rx buffer num: 32[0m
-[0;32mI (467) wifi:Init static rx mgmt buffer num: 5[0m
-[0;32mI (467) wifi:Init management short buffer num: 32[0m
-[0;32mI (467) wifi:Init dynamic tx buffer num: 32[0m
-[0;32mI (477) wifi:Init static tx FG buffer num: 2[0m
-[0;32mI (477) wifi:Init static rx buffer size: 1600[0m
-[0;32mI (487) wifi:Init static rx buffer num: 10[0m
-[0;32mI (487) wifi:Init dynamic rx buffer num: 32[0m
-[0;32mI (487) wifi_init: rx ba win: 6[0m
-[0;32mI (497) wifi_init: accept mbox: 6[0m
-[0;32mI (497) wifi_init: tcpip mbox: 32[0m
-[0;32mI (497) wifi_init: udp mbox: 6[0m
-[0;32mI (507) wifi_init: tcp mbox: 6[0m
-[0;32mI (507) wifi_init: tcp tx win: 5760[0m
-[0;32mI (507) wifi_init: tcp rx win: 5760[0m
-[0;32mI (517) wifi_init: tcp mss: 1440[0m
-[0;32mI (517) wifi_init: WiFi IRAM OP enabled[0m
-[0;32mI (517) wifi_init: WiFi RX IRAM OP enabled[0m
-[0;32mI (527) phy_init: phy_version 1180,01f2a49,Jun  4 2024,16:34:25[0m
-[0;32mI (557) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
-[0;32mI (557) wifi:enable tsf[0m
-[0;32mI (3067) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
-[0;32mI (3067) scan_app: SUPLA device found : SSID = SOMEF-R1-84FCE6EEDE68[0m
-[0;32mI (3067) scan_app:                      MAC = 84:fc:e6:ee:de:69[0m
-[0;32mI (3067) scan_app: SUPLA device found : SSID = SOMEF-R2L-24EC4A9BE80C[0m
-[0;32mI (3077) scan_app:                      MAC = 24:ec:4a:9b:e8:0d[0m
-[0;32mI (3077) scan_app: supla_ssid_mac = SOMEF-R2L-24EC4A9BE80C -------- 24:ec:4a:9b:e8:0d[0m
-[0;32mI (3087) scan_app: s= SOMEF-R2L-24EC4A9BE80C ******************** m= 24:ec:4a:9b:e8:0d[0m
-[0;32mI (3097) main: supla_ssid = SOMEF-R2L-24EC4A9BE80C ;;;;;;; supla_mac = 24:ec:4a:9b:e8:0d[0m
-[0;32mI (3107) display_driver: config bl pin[0m
-[0;32mI (3107) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
-[0;32mI (3117) display_driver: init spi bus[0m
-[0;32mI (3117) display_driver: init lcd panel io[0m
-[0;32mI (3127) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
-[0;32mI (3137) display_driver: init ili9341 driver[0m
-[0;32mI (3137) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
-[0;32mI (3147) ili9341: LCD panel create success, version: 1.2.0[0m
-[0;32mI (3267) display_driver: init lvgl[0m
-[0;32mI (3267) display_driver: init lv tick_timer[0m
-[0;32mI (3267) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
-[0;32mI (3277) display_driver: create lvgl task[0m
-[0;32mI (3277) display_driver: starting lvgl task[0m
-[0;32mI (3347) display_driver: start ui [0m
-[0;32mI (3357) display_driver: s = 8@(��?,��? *-*-*-*-*-*-*-*- m = 24:ec:4a:9b:e8:0d[0m
-[0;32mI (3427) main_task: Returned from app_main()[0m
+Command: ninja all
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scan_app.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/scan_app.c.obj 
+/home/mariem/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5-dev-1655-gc5865270b5-dirty\" -DLV_CONF_INCLUDE_SIMPLE -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/mariem/AP_displayer/build/config -I/home/mariem/AP_displayer/main -I/home/mariem/esp-idf/components/newlib/platform_include -I/home/mariem/esp-idf/components/freertos/config/include -I/home/mariem/esp-idf/components/freertos/config/include/freertos -I/home/mariem/esp-idf/components/freertos/config/riscv/include -I/home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/mariem/esp-idf/components/freertos/esp_additions/include -I/home/mariem/esp-idf/components/esp_hw_support/include -I/home/mariem/esp-idf/components/esp_hw_support/include/soc -I/home/mariem/esp-idf/components/esp_hw_support/include/soc/esp32c3 -I/home/mariem/esp-idf/components/esp_hw_support/dma/include -I/home/mariem/esp-idf/components/esp_hw_support/ldo/include -I/home/mariem/esp-idf/components/esp_hw_support/debug_probe/include -I/home/mariem/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/mariem/esp-idf/components/esp_hw_support/power_supply/include -I/home/mariem/esp-idf/components/esp_hw_support/port/esp32c3/. -I/home/mariem/esp-idf/components/esp_hw_support/port/esp32c3/include -I/home/mariem/esp-idf/components/heap/include -I/home/mariem/esp-idf/components/heap/tlsf -I/home/mariem/esp-idf/components/log/include -I/home/mariem/esp-idf/components/soc/include -I/home/mariem/esp-idf/components/soc/esp32c3 -I/home/mariem/esp-idf/components/soc/esp32c3/include -I/home/mariem/esp-idf/components/soc/esp32c3/register -I/home/mariem/esp-idf/components/hal/platform_port/include -I/home/mariem/esp-idf/components/hal/esp32c3/include -I/home/mariem/esp-idf/components/hal/include -I/home/mariem/esp-idf/components/esp_rom/include -I/home/mariem/esp-idf/components/esp_rom/esp32c3/include -I/home/mariem/esp-idf/components/esp_rom/esp32c3/include/esp32c3 -I/home/mariem/esp-idf/components/esp_rom/esp32c3 -I/home/mariem/esp-idf/components/esp_common/include -I/home/mariem/esp-idf/components/esp_system/include -I/home/mariem/esp-idf/components/esp_system/port/soc -I/home/mariem/esp-idf/components/esp_system/port/include/riscv -I/home/mariem/esp-idf/components/esp_system/port/include/private -I/home/mariem/esp-idf/components/riscv/include -I/home/mariem/esp-idf/components/lwip/include -I/home/mariem/esp-idf/components/lwip/include/apps -I/home/mariem/esp-idf/components/lwip/include/apps/sntp -I/home/mariem/esp-idf/components/lwip/lwip/src/include -I/home/mariem/esp-idf/components/lwip/port/include -I/home/mariem/esp-idf/components/lwip/port/freertos/include -I/home/mariem/esp-idf/components/lwip/port/esp32xx/include -I/home/mariem/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/mariem/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/mariem/esp-idf/components/esp_wifi/include -I/home/mariem/esp-idf/components/esp_wifi/include/local -I/home/mariem/esp-idf/components/esp_wifi/wifi_apps/include -I/home/mariem/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/mariem/esp-idf/components/esp_event/include -I/home/mariem/esp-idf/components/esp_phy/include -I/home/mariem/esp-idf/components/esp_phy/esp32c3/include -I/home/mariem/esp-idf/components/esp_netif/include -I/home/mariem/esp-idf/components/nvs_flash/include -I/home/mariem/esp-idf/components/esp_partition/include -I/home/mariem/AP_displayer/managed_components/espressif__esp_lcd_ili9341/include -I/home/mariem/esp-idf/components/driver/deprecated -I/home/mariem/esp-idf/components/driver/i2c/include -I/home/mariem/esp-idf/components/driver/touch_sensor/include -I/home/mariem/esp-idf/components/driver/twai/include -I/home/mariem/esp-idf/components/esp_pm/include -I/home/mariem/esp-idf/components/esp_ringbuf/include -I/home/mariem/esp-idf/components/esp_driver_gpio/include -I/home/mariem/esp-idf/components/esp_driver_pcnt/include -I/home/mariem/esp-idf/components/esp_driver_gptimer/include -I/home/mariem/esp-idf/components/esp_driver_spi/include -I/home/mariem/esp-idf/components/esp_driver_mcpwm/include -I/home/mariem/esp-idf/components/esp_driver_ana_cmpr/include -I/home/mariem/esp-idf/components/esp_driver_i2s/include -I/home/mariem/esp-idf/components/esp_driver_sdmmc/include -I/home/mariem/esp-idf/components/sdmmc/include -I/home/mariem/esp-idf/components/esp_driver_sdspi/include -I/home/mariem/esp-idf/components/esp_driver_sdio/include -I/home/mariem/esp-idf/components/esp_driver_dac/include -I/home/mariem/esp-idf/components/esp_driver_rmt/include -I/home/mariem/esp-idf/components/esp_driver_tsens/include -I/home/mariem/esp-idf/components/esp_driver_sdm/include -I/home/mariem/esp-idf/components/esp_driver_i2c/include -I/home/mariem/esp-idf/components/esp_driver_uart/include -I/home/mariem/esp-idf/components/vfs/include -I/home/mariem/esp-idf/components/esp_driver_ledc/include -I/home/mariem/esp-idf/components/esp_driver_parlio/include -I/home/mariem/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/mariem/esp-idf/components/esp_lcd/include -I/home/mariem/esp-idf/components/esp_lcd/interface -I/home/mariem/AP_displayer/managed_components/lvgl__lvgl -I/home/mariem/AP_displayer/managed_components/lvgl__lvgl/src -I/home/mariem/AP_displayer/managed_components -I/home/mariem/AP_displayer/managed_components/lvgl__lvgl/examples -I/home/mariem/AP_displayer/managed_components/lvgl__lvgl/demos -I/home/mariem/esp-idf/components/esp_timer/include -march=rv32imc_zicsr_zifencei  -fdiagnostics-color=always -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/mariem/AP_displayer=. -fmacro-prefix-map=/home/mariem/esp-idf=/IDF -fstrict-volatile-bitfields -fasynchronous-unwind-tables -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -DESP_LCD_ILI9341_VER_MAJOR=1 -DESP_LCD_ILI9341_VER_MINOR=2 -DESP_LCD_ILI9341_VER_PATCH=0 -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/scan_app.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/scan_app.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/scan_app.c.obj -c /home/mariem/AP_displayer/main/scan_app.c
+/home/mariem/AP_displayer/main/scan_app.c:18:13: error: conflicting types for 'supla_device_ssid'; have 'char[21]'
+   18 | extern char supla_device_ssid[21];
+      |             ^~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/scan_app.c:16:18: note: previous declaration of 'supla_device_ssid' with type 'uint8_t *' {aka 'unsigned char *'}
+   16 | extern uint8_t * supla_device_ssid ;
+      |                  ^~~~~~~~~~~~~~~~~
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /home/mariem/AP_displayer/build/bootloader/esp-idf/esptool_py && /home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/mariem/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/mariem/AP_displayer/build/bootloader/bootloader.bin
+Bootloader binary size 0x5230 bytes. 0x2dd0 bytes (36%) free.
+[3/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+/home/mariem/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5-dev-1655-gc5865270b5-dirty\" -DLV_CONF_INCLUDE_SIMPLE -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/mariem/AP_displayer/build/config -I/home/mariem/AP_displayer/main -I/home/mariem/esp-idf/components/newlib/platform_include -I/home/mariem/esp-idf/components/freertos/config/include -I/home/mariem/esp-idf/components/freertos/config/include/freertos -I/home/mariem/esp-idf/components/freertos/config/riscv/include -I/home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/mariem/esp-idf/components/freertos/esp_additions/include -I/home/mariem/esp-idf/components/esp_hw_support/include -I/home/mariem/esp-idf/components/esp_hw_support/include/soc -I/home/mariem/esp-idf/components/esp_hw_support/include/soc/esp32c3 -I/home/mariem/esp-idf/components/esp_hw_support/dma/include -I/home/mariem/esp-idf/components/esp_hw_support/ldo/include -I/home/mariem/esp-idf/components/esp_hw_support/debug_probe/include -I/home/mariem/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/mariem/esp-idf/components/esp_hw_support/power_supply/include -I/home/mariem/esp-idf/components/esp_hw_support/port/esp32c3/. -I/home/mariem/esp-idf/components/esp_hw_support/port/esp32c3/include -I/home/mariem/esp-idf/components/heap/include -I/home/mariem/esp-idf/components/heap/tlsf -I/home/mariem/esp-idf/components/log/include -I/home/mariem/esp-idf/components/soc/include -I/home/mariem/esp-idf/components/soc/esp32c3 -I/home/mariem/esp-idf/components/soc/esp32c3/include -I/home/mariem/esp-idf/components/soc/esp32c3/register -I/home/mariem/esp-idf/components/hal/platform_port/include -I/home/mariem/esp-idf/components/hal/esp32c3/include -I/home/mariem/esp-idf/components/hal/include -I/home/mariem/esp-idf/components/esp_rom/include -I/home/mariem/esp-idf/components/esp_rom/esp32c3/include -I/home/mariem/esp-idf/components/esp_rom/esp32c3/include/esp32c3 -I/home/mariem/esp-idf/components/esp_rom/esp32c3 -I/home/mariem/esp-idf/components/esp_common/include -I/home/mariem/esp-idf/components/esp_system/include -I/home/mariem/esp-idf/components/esp_system/port/soc -I/home/mariem/esp-idf/components/esp_system/port/include/riscv -I/home/mariem/esp-idf/components/esp_system/port/include/private -I/home/mariem/esp-idf/components/riscv/include -I/home/mariem/esp-idf/components/lwip/include -I/home/mariem/esp-idf/components/lwip/include/apps -I/home/mariem/esp-idf/components/lwip/include/apps/sntp -I/home/mariem/esp-idf/components/lwip/lwip/src/include -I/home/mariem/esp-idf/components/lwip/port/include -I/home/mariem/esp-idf/components/lwip/port/freertos/include -I/home/mariem/esp-idf/components/lwip/port/esp32xx/include -I/home/mariem/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/mariem/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/mariem/esp-idf/components/esp_wifi/include -I/home/mariem/esp-idf/components/esp_wifi/include/local -I/home/mariem/esp-idf/components/esp_wifi/wifi_apps/include -I/home/mariem/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/mariem/esp-idf/components/esp_event/include -I/home/mariem/esp-idf/components/esp_phy/include -I/home/mariem/esp-idf/components/esp_phy/esp32c3/include -I/home/mariem/esp-idf/components/esp_netif/include -I/home/mariem/esp-idf/components/nvs_flash/include -I/home/mariem/esp-idf/components/esp_partition/include -I/home/mariem/AP_displayer/managed_components/espressif__esp_lcd_ili9341/include -I/home/mariem/esp-idf/components/driver/deprecated -I/home/mariem/esp-idf/components/driver/i2c/include -I/home/mariem/esp-idf/components/driver/touch_sensor/include -I/home/mariem/esp-idf/components/driver/twai/include -I/home/mariem/esp-idf/components/esp_pm/include -I/home/mariem/esp-idf/components/esp_ringbuf/include -I/home/mariem/esp-idf/components/esp_driver_gpio/include -I/home/mariem/esp-idf/components/esp_driver_pcnt/include -I/home/mariem/esp-idf/components/esp_driver_gptimer/include -I/home/mariem/esp-idf/components/esp_driver_spi/include -I/home/mariem/esp-idf/components/esp_driver_mcpwm/include -I/home/mariem/esp-idf/components/esp_driver_ana_cmpr/include -I/home/mariem/esp-idf/components/esp_driver_i2s/include -I/home/mariem/esp-idf/components/esp_driver_sdmmc/include -I/home/mariem/esp-idf/components/sdmmc/include -I/home/mariem/esp-idf/components/esp_driver_sdspi/include -I/home/mariem/esp-idf/components/esp_driver_sdio/include -I/home/mariem/esp-idf/components/esp_driver_dac/include -I/home/mariem/esp-idf/components/esp_driver_rmt/include -I/home/mariem/esp-idf/components/esp_driver_tsens/include -I/home/mariem/esp-idf/components/esp_driver_sdm/include -I/home/mariem/esp-idf/components/esp_driver_i2c/include -I/home/mariem/esp-idf/components/esp_driver_uart/include -I/home/mariem/esp-idf/components/vfs/include -I/home/mariem/esp-idf/components/esp_driver_ledc/include -I/home/mariem/esp-idf/components/esp_driver_parlio/include -I/home/mariem/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/mariem/esp-idf/components/esp_lcd/include -I/home/mariem/esp-idf/components/esp_lcd/interface -I/home/mariem/AP_displayer/managed_components/lvgl__lvgl -I/home/mariem/AP_displayer/managed_components/lvgl__lvgl/src -I/home/mariem/AP_displayer/managed_components -I/home/mariem/AP_displayer/managed_components/lvgl__lvgl/examples -I/home/mariem/AP_displayer/managed_components/lvgl__lvgl/demos -I/home/mariem/esp-idf/components/esp_timer/include -march=rv32imc_zicsr_zifencei  -fdiagnostics-color=always -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/mariem/AP_displayer=. -fmacro-prefix-map=/home/mariem/esp-idf=/IDF -fstrict-volatile-bitfields -fasynchronous-unwind-tables -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -DESP_LCD_ILI9341_VER_MAJOR=1 -DESP_LCD_ILI9341_VER_MINOR=2 -DESP_LCD_ILI9341_VER_PATCH=0 -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c /home/mariem/AP_displayer/main/main.c
+/home/mariem/AP_displayer/main/main.c: In function 'app_main':
+/home/mariem/AP_displayer/main/main.c:35:9: error: 'char_supla_device_ssid' undeclared (first use in this function)
+   35 |         char_supla_device_ssid[i] = (char)supla_device_ssid[i];
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/main.c:35:9: note: each undeclared identifier is reported only once for each function it appears in
+/home/mariem/AP_displayer/main/main.c:35:43: error: 'supla_device_ssid' undeclared (first use in this function)
+   35 |         char_supla_device_ssid[i] = (char)supla_device_ssid[i];
+      |                                           ^~~~~~~~~~~~~~~~~
+In file included from /home/mariem/AP_displayer/main/main.c:2:
+/home/mariem/AP_displayer/main/display_driver.h: At top level:
+/home/mariem/AP_displayer/main/display_driver.h:31:13: warning: 'notify_lvgl_flush_ready' declared 'static' but never defined [-Wunused-function]
+   31 | static bool notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io, esp_lcd_panel_io_event_data_t *data, void * user_ctx);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.h:32:13: warning: 'lvgl_flush_cb' declared 'static' but never defined [-Wunused-function]
+   32 | static void lvgl_flush_cb(lv_display_t * disp, const lv_area_t * area, uint8_t * px_map);
+      |             ^~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.h:33:13: warning: 'lvgl_port_update_callback' declared 'static' but never defined [-Wunused-function]
+   33 | static void lvgl_port_update_callback(lv_display_t *disp);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.h:34:13: warning: 'increase_lvgl_tick' declared 'static' but never defined [-Wunused-function]
+   34 | static void increase_lvgl_tick(void * arg);
+      |             ^~~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.h:35:13: warning: 'lvgl_port_task' declared 'static' but never defined [-Wunused-function]
+   35 | static void lvgl_port_task(void * arg);
+      |             ^~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.
