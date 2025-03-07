@@ -277,18 +277,21 @@ void display_init()
 
     //ui
     
-    lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003a57), LV_PART_MAIN);
+    lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003300), LV_PART_MAIN);
     lv_disp_set_rotation(lv_disp_get_default(), LV_DISP_ROTATION_90);
 
     //label_ssid
     lv_obj_t *label_ssid = lv_label_create(lv_screen_active());
     
+    
+
     const char * s = char_supla_device_ssid;
     lv_label_set_text(label_ssid, s);
     lv_obj_set_style_text_color(label_ssid, lv_color_hex(0xffffff), LV_PART_MAIN);
-    lv_obj_align(label_ssid, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_align(label_ssid, LV_ALIGN_CENTER, 0, 80);
     lv_obj_set_width(label_ssid, LCD_H_RES);
     lv_obj_set_style_text_align(label_ssid, LV_TEXT_ALIGN_CENTER, 0);
+    
 
     //label_device_type__R2L_R2S_R1_R0
     lv_obj_t * label_dt = lv_label_create(lv_screen_active());
@@ -298,7 +301,7 @@ void display_init()
         const char  * dt = "R0";
         lv_label_set_text(label_dt, dt);
         lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
-        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -40);
+        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -80);
         lv_obj_set_width(label_dt, LCD_H_RES);
         lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
     }
@@ -307,7 +310,7 @@ void display_init()
         const char  * dt = "R1";
         lv_label_set_text(label_dt, dt);
         lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
-        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -40);
+        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -80);
         lv_obj_set_width(label_dt, LCD_H_RES);
         lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
     }
@@ -316,7 +319,7 @@ void display_init()
         const char  * dt = "R2L";
         lv_label_set_text(label_dt, dt);
         lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
-        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -40);
+        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -80);
         lv_obj_set_width(label_dt, LCD_H_RES);
         lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
     }
@@ -325,10 +328,12 @@ void display_init()
         const char  * dt = "R2S";
         lv_label_set_text(label_dt, dt);
         lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
-        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -40);
+        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -80);
         lv_obj_set_width(label_dt, LCD_H_RES);
         lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
     }
+    lv_obj_set_style_text_font(label_dt, &lv_font_montserrat_40, LV_PART_MAIN);
+
 
     //label_mac
     lv_obj_t * label_mac = lv_label_create(lv_screen_active());
@@ -336,10 +341,10 @@ void display_init()
     const char * m = supla_device_mac;
     lv_label_set_text(label_mac, m);
     lv_obj_set_style_text_color(label_mac, lv_color_hex(0xffffff), LV_PART_MAIN);
-    lv_obj_align(label_mac, LV_ALIGN_CENTER, 0, 40);
+    lv_obj_align(label_mac, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_width(label_mac, LCD_H_RES);
     lv_obj_set_style_text_align(label_mac, LV_TEXT_ALIGN_CENTER, 0);
-      
+    lv_obj_set_style_text_font(label_mac, &lv_font_montserrat_28, LV_PART_MAIN);  
 
 
     _lock_release(&lvgl_api_lock); //end ui
