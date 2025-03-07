@@ -281,17 +281,66 @@ void display_init()
     lv_disp_set_rotation(lv_disp_get_default(), LV_DISP_ROTATION_90);
 
     //label_ssid
-    lv_obj_t *label = lv_label_create(lv_screen_active());
+    lv_obj_t *label_ssid = lv_label_create(lv_screen_active());
     
     const char * s = char_supla_device_ssid;
-    lv_label_set_text(label, s);
-    lv_obj_set_style_text_color(label, lv_color_hex(0xffffff), LV_PART_MAIN);
-    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-    lv_obj_set_width(label, LCD_H_RES);
-    lv_obj_set_style_text_align(label, LV_TEXT_ALIGN_CENTER, 0);
+    lv_label_set_text(label_ssid, s);
+    lv_obj_set_style_text_color(label_ssid, lv_color_hex(0xffffff), LV_PART_MAIN);
+    lv_obj_align(label_ssid, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_width(label_ssid, LCD_H_RES);
+    lv_obj_set_style_text_align(label_ssid, LV_TEXT_ALIGN_CENTER, 0);
 
     //label_device_type__R2L_R2S_R1_R0
+    lv_obj_t * label_dt = lv_label_create(lv_screen_active());
+
+    if (char_supla_device_ssid[7] == '0') //R0
+    {
+        const char  * dt = "R0";
+        lv_label_set_text(label_dt, dt);
+        lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
+        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -40);
+        lv_obj_set_width(label_dt, LCD_H_RES);
+        lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
+    }
+    else if (char_supla_device_ssid[7] == '1') //R1
+    {
+        const char  * dt = "R1";
+        lv_label_set_text(label_dt, dt);
+        lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
+        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -40);
+        lv_obj_set_width(label_dt, LCD_H_RES);
+        lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
+    }
+    else if (char_supla_device_ssid[7] == '2' && char_supla_device_ssid[8] == 'L') //R2L
+    {
+        const char  * dt = "R2L";
+        lv_label_set_text(label_dt, dt);
+        lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
+        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -40);
+        lv_obj_set_width(label_dt, LCD_H_RES);
+        lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
+    }
+    else if (char_supla_device_ssid[7] == '2' && char_supla_device_ssid[8] == 'S') //R2S
+    {
+        const char  * dt = "R2S";
+        lv_label_set_text(label_dt, dt);
+        lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
+        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -40);
+        lv_obj_set_width(label_dt, LCD_H_RES);
+        lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
+    }
+
+    //label_mac
+    lv_obj_t * label_mac = lv_label_create(lv_screen_active());
     
+    const char * m = supla_device_mac;
+    lv_label_set_text(label_mac, m);
+    lv_obj_set_style_text_color(label_mac, lv_color_hex(0xffffff), LV_PART_MAIN);
+    lv_obj_align(label_mac, LV_ALIGN_CENTER, 0, 40);
+    lv_obj_set_width(label_mac, LCD_H_RES);
+    lv_obj_set_style_text_align(label_mac, LV_TEXT_ALIGN_CENTER, 0);
+      
+
 
     _lock_release(&lvgl_api_lock); //end ui
 }
