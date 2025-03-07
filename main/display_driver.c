@@ -278,8 +278,9 @@ void display_init()
     //ui
     
     lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003a57), LV_PART_MAIN);
+    lv_disp_set_rotation(lv_disp_get_default(), LV_DISP_ROTATION_90);
 
-    //label
+    //label_ssid
     lv_obj_t *label = lv_label_create(lv_screen_active());
     
     const char * s = char_supla_device_ssid;
@@ -289,8 +290,8 @@ void display_init()
     lv_obj_set_width(label, LCD_H_RES);
     lv_obj_set_style_text_align(label, LV_TEXT_ALIGN_CENTER, 0);
 
+    //label_device_type__R2L_R2S_R1_R0
     
-
 
     _lock_release(&lvgl_api_lock); //end ui
 }
