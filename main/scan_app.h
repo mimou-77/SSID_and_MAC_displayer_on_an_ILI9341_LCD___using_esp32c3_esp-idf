@@ -20,7 +20,7 @@ typedef struct
 /*******************************************************
  *                functions headers
  *******************************************************/
-supla_ssid_mac_t wifi_scan();
+void wifi_scan();
 
 
 

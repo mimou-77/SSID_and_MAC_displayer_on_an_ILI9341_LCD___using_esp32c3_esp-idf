@@ -5,7 +5,6 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 
-
  
 static const char * TAG = "main";
  
@@ -25,15 +24,10 @@ void app_main(void)
         err = nvs_flash_init();
     }
 
-
-    supla_ssid_mac_t supla_ssid_mac = wifi_scan();
-    const char * supla_ssid = (char *) (supla_ssid_mac.supla_device_ssid);
-    const char * supla_mac = supla_ssid_mac.supla_device_mac;
+    wifi_scan();
     
-    
-    ESP_LOGI(TAG, "supla_ssid = %s ;;;;;;; supla_mac = %s", supla_ssid, supla_mac);
     
 
-    display_init(supla_ssid, supla_mac);
+    //display_init(supla_ssid, supla_mac);
 
 }

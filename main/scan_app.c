@@ -17,6 +17,7 @@ uint8_t * supla_device_ssid ;
 char supla_device_mac[18] ;
 
 
+
 /*******************************************************
  *                functions implementations
  *******************************************************/
@@ -24,7 +25,7 @@ char supla_device_mac[18] ;
  * @brief scans wifi and returns a structure containing the supla device ssid and mac
  * @return 
  */
-supla_ssid_mac_t wifi_scan()
+void wifi_scan()
 {
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
@@ -80,12 +81,11 @@ supla_ssid_mac_t wifi_scan()
         
     }
 
-    supla_ssid_mac_t supla_ssid_mac =
-        {
-            .supla_device_ssid = supla_device_ssid,
-            .supla_device_mac = supla_device_mac
-        };
+    // supla_ssid_mac_t supla_ssid_mac =
+    //     {
+    //         .supla_device_ssid = supla_device_ssid,
+    //         .supla_device_mac = supla_device_mac
+    //     };
     //}//end while(1)
     
-    return supla_ssid_mac;
 }
