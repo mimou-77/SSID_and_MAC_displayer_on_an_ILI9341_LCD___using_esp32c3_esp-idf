@@ -28,8 +28,17 @@ void app_main(void)
 
     wifi_scan();
     
-    ESP_LOGI(TAG, "from main: ssid = %s", supla_device_ssid);
+    char  char_supla_device_ssid[21];
+    for (int i = 0; i < 21; i++)
+    {
+        char_supla_device_ssid[i] = (char)supla_device_ssid[i];
+    }
     
+
+    ESP_LOGI(TAG, "from main: uint8_t  ssid = %s", supla_device_ssid); //incorrect result (bad characters)
+    ESP_LOGI(TAG, "from main: char ssid = %s", char_supla_device_ssid);
+    
+
     
 
     //display_init(supla_ssid, supla_mac);
