@@ -8,8 +8,10 @@
  
 static const char * TAG = "main";
 
-extern uint8_t * supla_device_ssid ;
-extern char supla_device_mac[18] ;
+uint8_t * supla_device_ssid ;
+char supla_device_mac[18] ;
+char  char_supla_device_ssid[21];
+
  
 
 void app_main(void)
@@ -28,7 +30,6 @@ void app_main(void)
 
     wifi_scan();
     
-    char  char_supla_device_ssid[21];
     for (int i = 0; i < 21; i++)
     {
         char_supla_device_ssid[i] = (char)supla_device_ssid[i];
@@ -41,6 +42,6 @@ void app_main(void)
 
     
 
-    //display_init(supla_ssid, supla_mac);
+    // display_init();
 
 }

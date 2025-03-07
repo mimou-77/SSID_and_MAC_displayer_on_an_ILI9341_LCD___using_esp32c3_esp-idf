@@ -17,7 +17,8 @@
         "esp_lvgl_port.h": "c",
         "esp_lcd_panel_dev.h": "c",
         "esp_check.h": "c",
-        "lock.h": "c"
+        "lock.h": "c",
+        "esp_wifi.h": "c"
     },
     "workbench.colorTheme": "Default Light+"
 }

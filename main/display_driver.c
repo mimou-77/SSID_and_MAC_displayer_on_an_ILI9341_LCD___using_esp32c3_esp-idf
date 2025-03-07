@@ -1,4 +1,5 @@
 #include "display_driver.h"
+#include "scan_app.h"
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -60,8 +61,10 @@ static const char *TAG = "display_driver";
 
 static _lock_t lvgl_api_lock; //lvgl APIs will br called from different tasks => mutex ; before every lvgl API call: aquire lock 
 
-extern uint8_t * supla_device_ssid ;
-extern char supla_device_mac[18] ;
+uint8_t * supla_device_ssid ;
+char supla_device_mac[18] ;
+char  char_supla_device_ssid[21];
+
 
 
 // /*******************************************************
@@ -279,7 +282,7 @@ void display_init()
     //label
     lv_obj_t *label = lv_label_create(lv_screen_active());
     
-    const char * s = (char *) supla_device_ssid;
+    const char * s = char_supla_device_ssid;
     lv_label_set_text(label, s);
     lv_obj_set_style_text_color(label, lv_color_hex(0xffffff), LV_PART_MAIN);
     lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
