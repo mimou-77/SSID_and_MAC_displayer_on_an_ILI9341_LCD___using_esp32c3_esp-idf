@@ -61,10 +61,6 @@ static const char *TAG = "display_driver";
 
 static _lock_t lvgl_api_lock; //lvgl APIs will br called from different tasks => mutex ; before every lvgl API call: aquire lock 
 
-uint8_t * supla_device_ssid ;
-char supla_device_mac[18] ;
-char  char_supla_device_ssid[21];
-
 
 
 // /*******************************************************

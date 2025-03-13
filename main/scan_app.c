@@ -14,8 +14,6 @@
 static const char *TAG = "scan_app";
 
 
-
-
 /*******************************************************
  *                functions implementations
  *******************************************************/
@@ -63,7 +61,7 @@ void wifi_scan()
             
             supla_device_ssid = ap_info[i].ssid;
 
-            for (int j = 0; j < 6; j++)
+            for (int j = 0; j < 21; j++)
             {
                 supla_device_ssid[j] = (ap_info[i].ssid)[j];
             }

@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "bootloader",
-    "project_version":    "v5.5-dev-1655-gc5865270b5-dirty",
+    "project_version":    "v5.5-dev-2290-g94cfe394fe-dirty",
     "project_path":       "/home/mariem/esp-idf/components/bootloader/subproject",
     "idf_path":           "/home/mariem/esp-idf",
     "build_dir":          "/home/mariem/AP_displayer/build/bootloader",
@@ -11,7 +11,7 @@
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",
     "build_type":         "flash_app",
-    "git_revision":       "v5.5-dev-1655-gc5865270b5-dirty",
+    "git_revision":       "v5.5-dev-2290-g94cfe394fe-dirty",
     "target":             "esp32c3",
     "rev":                "",
     "min_rev":            "3",
@@ -400,7 +400,7 @@
             "dir": "/home/mariem/esp-idf/components/bt",
             "lib": "__idf_bt",
             "reqs": [ "esp_timer", "esp_wifi" ],
-            "priv_reqs": [ "nvs_flash", "soc", "esp_pm", "esp_phy", "esp_coex", "mbedtls", "esp_driver_uart", "vfs", "esp_ringbuf" ],
+            "priv_reqs": [ "nvs_flash", "soc", "esp_pm", "esp_phy", "esp_coex", "mbedtls", "esp_driver_uart", "vfs", "esp_ringbuf", "esp_driver_spi", "esp_driver_gpio", "esp_gdbstub" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": []
@@ -1312,10 +1312,10 @@
             "dir": "/home/mariem/esp-idf/components/mbedtls",
             "lib": "__idf_mbedtls",
             "reqs": [],
-            "priv_reqs": [ "soc", "esp_hw_support" ],
+            "priv_reqs": [ "hal" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "port/include", "mbedtls/include", "mbedtls/library" ]
+            "include_dirs": []
         },
         "mqtt": {
             "alias": "idf::mqtt",
@@ -1348,7 +1348,7 @@
             "dir": "/home/mariem/esp-idf/components/nvs_flash",
             "lib": "__idf_nvs_flash",
             "reqs": [ "esp_partition" ],
-            "priv_reqs": [],
+            "priv_reqs": [ "mbedtls" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]

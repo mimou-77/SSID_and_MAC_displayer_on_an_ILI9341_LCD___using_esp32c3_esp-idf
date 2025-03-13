@@ -19,7 +19,8 @@
         "esp_check.h": "c",
         "lock.h": "c",
         "esp_wifi.h": "c",
-        "scan_app.h": "c"
+        "scan_app.h": "c",
+        "display_driver.h": "c"
     },
     "workbench.colorTheme": "Default Light+"
 }

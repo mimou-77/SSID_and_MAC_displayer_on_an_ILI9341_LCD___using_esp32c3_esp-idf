@@ -2193,6 +2193,26 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_LP_TIMER_BIT_WIDTH_LO",
+        "name": "SOC_LP_TIMER_BIT_WIDTH_LO",
+        "range": null,
+        "title": null,
+        "type": "int"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_LP_TIMER_BIT_WIDTH_HI",
+        "name": "SOC_LP_TIMER_BIT_WIDTH_HI",
+        "range": null,
+        "title": null,
+        "type": "int"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_MWDT_SUPPORT_XTAL",
         "name": "SOC_MWDT_SUPPORT_XTAL",
         "range": null,
@@ -2495,6 +2515,16 @@
         "help": null,
         "id": "SOC_UART_SUPPORT_FSM_TX_WAIT_SEND",
         "name": "SOC_UART_SUPPORT_FSM_TX_WAIT_SEND",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_UART_WAKEUP_SUPPORT_ACTIVE_THRESH_MODE",
+        "name": "SOC_UART_WAKEUP_SUPPORT_ACTIVE_THRESH_MODE",
         "range": null,
         "title": null,
         "type": "bool"
@@ -3115,6 +3145,16 @@
         "help": null,
         "id": "IDF_TARGET_ESP32H21",
         "name": "IDF_TARGET_ESP32H21",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "IDF_TARGET_ESP32H4",
+        "name": "IDF_TARGET_ESP32H4",
         "range": null,
         "title": null,
         "type": "bool"
@@ -4362,7 +4402,7 @@
             },
             {
                 "children": [],
-                "depends_on": "SECURE_BOOT_V2_ENABLED && SECURE_BOOT_BUILD_SIGNED_BINARIES",
+                "depends_on": "SECURE_BOOT_V2_ENABLED",
                 "help": "When Secure Boot V2 is enabled, by default the bootloader is not flashed along with other artifacts\nlike the application and the partition table images, i.e. bootloader has to be separately flashed\nusing the command `idf.py bootloader flash`, whereas, the application and partition table can be flashed\nusing the command `idf.py flash` itself.\nEnabling this option allows flashing the bootloader along with the other artifacts\nby invocation of the command `idf.py flash`.\n\nIf this option is enabled make sure that even the bootloader is signed using the correct secure boot key,\notherwise the bootloader signature verification would fail, as hash of the public key which is present in\nthe bootloader signature would not match with the digest stored into the efuses\nand thus the device will not be able to boot up.",
                 "id": "SECURE_BOOT_FLASH_BOOTLOADER_DEFAULT",
                 "name": "SECURE_BOOT_FLASH_BOOTLOADER_DEFAULT",
@@ -6975,41 +7015,51 @@
                     {
                         "children": [],
                         "depends_on": "SOC_GPTIMER_SUPPORTED",
-                        "help": "Place GPTimer ISR handler into IRAM for better performance and fewer cache misses.",
+                        "help": "Place GPTimer ISR handler in IRAM to reduce latency caused by cache miss.",
                         "id": "GPTIMER_ISR_HANDLER_IN_IRAM",
                         "name": "GPTIMER_ISR_HANDLER_IN_IRAM",
                         "range": null,
-                        "title": "Place GPTimer ISR handler into IRAM",
+                        "title": "Place GPTimer ISR handler in IRAM to reduce latency",
                         "type": "bool"
                     },
                     {
                         "children": [],
                         "depends_on": "SOC_GPTIMER_SUPPORTED",
-                        "help": "Place GPTimer control functions (like start/stop) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.\nEnabling this option can improve driver performance as well.",
+                        "help": "Place GPTimer control functions (like start/stop) in IRAM, to reduce latency caused by cache miss.\nIf enabled, these functions can also be called when cache is disabled.",
                         "id": "GPTIMER_CTRL_FUNC_IN_IRAM",
                         "name": "GPTIMER_CTRL_FUNC_IN_IRAM",
                         "range": null,
-                        "title": "Place GPTimer control functions into IRAM",
+                        "title": "Place GPTimer control functions in IRAM",
                         "type": "bool"
                     },
                     {
                         "children": [],
                         "depends_on": "SOC_GPTIMER_SUPPORTED",
-                        "help": "Ensure the GPTimer interrupt is IRAM-Safe by allowing the interrupt handler to be\nexecutable when the cache is disabled (e.g. SPI Flash write).",
-                        "id": "GPTIMER_ISR_IRAM_SAFE",
-                        "name": "GPTIMER_ISR_IRAM_SAFE",
+                        "help": "Enable this option to allow the GPTimer Interrupt Service Routine (ISR)\nto execute even when the cache is disabled. This can be useful in scenarios where the cache\nmight be turned off, but the GPTimer functionality is still required to operate correctly.",
+                        "id": "GPTIMER_ISR_CACHE_SAFE",
+                        "name": "GPTIMER_ISR_CACHE_SAFE",
                         "range": null,
-                        "title": "GPTimer ISR IRAM-Safe",
+                        "title": "Allow GPTimer ISR to execute when cache is disabled",
                         "type": "bool"
                     },
                     {
                         "children": [],
                         "depends_on": "SOC_GPTIMER_SUPPORTED",
-                        "help": "whether to enable the debug log message for GPTimer driver.\nNote that, this option only controls the GPTimer driver log, won't affect other drivers.",
+                        "help": "This will ensure the GPTimer object will not be allocated from a memory region\nwhere its cache can be disabled.",
+                        "id": "GPTIMER_OBJ_CACHE_SAFE",
+                        "name": "GPTIMER_OBJ_CACHE_SAFE",
+                        "range": null,
+                        "title": null,
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_GPTIMER_SUPPORTED",
+                        "help": "If enabled, GPTimer component will:\n1. ignore the global logging settings\n2. compile all log messages into the binary\n3. set the runtime log level to VERBOSE\nPlease enable this option by caution, as it will increase the binary size.",
                         "id": "GPTIMER_ENABLE_DEBUG_LOG",
                         "name": "GPTIMER_ENABLE_DEBUG_LOG",
                         "range": null,
-                        "title": "Enable debug log",
+                        "title": "Force enable debug log",
                         "type": "bool"
                     }
                 ],
@@ -7048,6 +7098,16 @@
                         "name": "I2C_ENABLE_SLAVE_DRIVER_VERSION_2",
                         "range": null,
                         "title": "Enable I2C slave driver version 2",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_I2C_SUPPORTED",
+                        "help": "Place I2C master ISR handler into IRAM for better performance and fewer cache misses.",
+                        "id": "I2C_MASTER_ISR_HANDLER_IN_IRAM",
+                        "name": "I2C_MASTER_ISR_HANDLER_IN_IRAM",
+                        "range": null,
+                        "title": "Place I2C master ISR handler into IRAM",
                         "type": "bool"
                     }
                 ],
@@ -7145,11 +7205,61 @@
                     {
                         "children": [],
                         "depends_on": "SOC_PARLIO_SUPPORTED",
-                        "help": "whether to enable the debug log message for parallel IO driver.\nNote that, this option only controls the parallel IO driver log, won't affect other drivers.",
+                        "help": "Place Parallel IO TX ISR handler in IRAM to reduce latency caused by cache miss.",
+                        "id": "PARLIO_TX_ISR_HANDLER_IN_IRAM",
+                        "name": "PARLIO_TX_ISR_HANDLER_IN_IRAM",
+                        "range": null,
+                        "title": "Place Parallel IO TX ISR handler in IRAM to reduce latency",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_PARLIO_SUPPORTED",
+                        "help": "Place Parallel IO RX ISR handler in IRAM to reduce latency caused by cache miss.",
+                        "id": "PARLIO_RX_ISR_HANDLER_IN_IRAM",
+                        "name": "PARLIO_RX_ISR_HANDLER_IN_IRAM",
+                        "range": null,
+                        "title": "Place Parallel IO RX ISR handler in IRAM to reduce latency",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_PARLIO_SUPPORTED",
+                        "help": "Enable this option to allow the Parallel IO TX Interrupt Service Routine (ISR)\nto execute even when the cache is disabled. This can be useful in scenarios where the cache\nmight be turned off, but the Parallel IO TX functionality is still required to operate correctly.",
+                        "id": "PARLIO_TX_ISR_CACHE_SAFE",
+                        "name": "PARLIO_TX_ISR_CACHE_SAFE",
+                        "range": null,
+                        "title": "Allow Parallel IO TX ISR to execute when cache is disabled",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_PARLIO_SUPPORTED",
+                        "help": "Enable this option to allow the Parallel IO RX Interrupt Service Routine (ISR)\nto execute even when the cache is disabled. This can be useful in scenarios where the cache\nmight be turned off, but the Parallel IO RX functionality is still required to operate correctly.",
+                        "id": "PARLIO_RX_ISR_CACHE_SAFE",
+                        "name": "PARLIO_RX_ISR_CACHE_SAFE",
+                        "range": null,
+                        "title": "Allow Parallel IO RX ISR to execute when cache is disabled",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_PARLIO_SUPPORTED",
+                        "help": "This will ensure the driver object will not be allocated from a memory region\nwhere its cache can be disabled.",
+                        "id": "PARLIO_OBJ_CACHE_SAFE",
+                        "name": "PARLIO_OBJ_CACHE_SAFE",
+                        "range": null,
+                        "title": null,
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_PARLIO_SUPPORTED",
+                        "help": "If enabled, Parallel IO driver component will:\n1. ignore the global logging settings\n2. compile all log messages into the binary\n3. set the runtime log level to VERBOSE\nPlease enable this option by caution, as it will increase the binary size.",
                         "id": "PARLIO_ENABLE_DEBUG_LOG",
                         "name": "PARLIO_ENABLE_DEBUG_LOG",
                         "range": null,
-                        "title": "Enable debug log",
+                        "title": "Force enable debug log",
                         "type": "bool"
                     },
                     {
@@ -7159,7 +7269,7 @@
                         "id": "PARLIO_ISR_IRAM_SAFE",
                         "name": "PARLIO_ISR_IRAM_SAFE",
                         "range": null,
-                        "title": "Parallel IO ISR IRAM-Safe",
+                        "title": "Parallel IO ISR IRAM-Safe (Deprecated)",
                         "type": "bool"
                     }
                 ],
@@ -8943,7 +9053,7 @@
                     {
                         "children": [],
                         "depends_on": "SOC_PM_SUPPORT_TOP_PD && SOC_PAU_SUPPORTED",
-                        "help": "If enabled, digital peripherals will be powered down in light sleep, it will reduce sleep\ncurrent consumption by about 100 uA. Chip will save/restore register context at sleep/wake\ntime to keep the system running. Enabling this option will increase static RAM and heap usage,\nthe actual cost depends on the peripherals you have initialized. In order to save/restore the\ncontext of the necessary hardware for FreeRTOS to run, it will need at least 4.55 KB free heap\nat sleep time. Otherwise sleep will not power down the peripherals.\n\nNote1: Please use this option with caution, the current IDF does not support the retention of\nall peripherals. When the digital peripherals are powered off and a sleep and wake-up is completed,\nthe peripherals that have not saved the running context are equivalent to performing a reset.\n!!! Please confirm the peripherals used in your application and their sleep retention support status\nbefore enabling this option, peripherals sleep retention driver support status is tracked in\npower_management.rst\n\nNote2: When this option is enabled simultaneously with FREERTOS_USE_TICKLESS_IDLE, since the UART will\nbe powered down, the uart FIFO will be flushed before sleep to avoid data loss, however, this has the\npotential to block the sleep process and cause the wakeup time to be skipped, which will cause the tick\nof freertos to not be compensated correctly when returning from sleep and cause the system to crash.\nTo avoid this, you can increase FREERTOS_IDLE_TIME_BEFORE_SLEEP threshold in menuconfig.",
+                        "help": "If enabled, digital peripherals will try to powered down in light sleep, then all related peripherals will\nnot be available during sleep, including wake-up sources from the peripherals (For detailed availability\ninformation, see the note of the corresponding wakeup source enable function).\nThe chip will automatically save/restore register context during sleep/wakeup to make the upper layer\nuser unaware of the peripheral powerdown during sleep. Enabling this option will increase static RAM and\nheap usage but will also significantly reduce power.\nconsumption during lightsleep, the actual memory cost depends on the peripherals you have initialized,\nfor specific power consumption data in this mode, please refer to Electrical Characteristics section\nin the chip datasheet.\n(In order to save/restore the context of the necessary hardware for FreeRTOS to run, it will need\nat least 4.55 KB free heap at sleep time. Otherwise sleep will not power down the peripherals.)\n\nNote1: Please use this option with caution, the current IDF does not support the retention of\nall peripherals. When the digital peripherals are powered off and a sleep and wake-up is completed,\nthe peripherals that have not saved the running context are equivalent to performing a reset.\n!!! Please confirm the peripherals used in your application and their sleep retention support status\nbefore enabling this option, peripherals sleep retention driver support status is tracked in\npower_management.rst\n\nNote2: When this option is enabled simultaneously with FREERTOS_USE_TICKLESS_IDLE, since the UART will\nbe powered down, the uart FIFO will be flushed before sleep to avoid data loss, however, this has the\npotential to block the sleep process and cause the wakeup time to be skipped, which will cause the tick\nof freertos to not be compensated correctly when returning from sleep and cause the system to crash.\nTo avoid this, you can increase FREERTOS_IDLE_TIME_BEFORE_SLEEP threshold in menuconfig.\n\nNote3: Enabling this option does not necessarily mean that the peripheral power domain will be\nturned down during sleep. The control priority of `esp_sleep_pd_config` is higher than this option,\nuser code can still prevent the peripheral power domain from powering down during sleep by\n`esp_sleep_pd_config(ESP_PD_DOMAIN_TOP, ESP_PD_OPTION_ON)`. In addition, whether the peripheral power\ndomain is powered down during sleep also depends on the sleep working strategy selected by the driver.\nIf any module belonging to the peripheral power domain chooses not to be powered down during sleep,\nthen the peripheral power domain will not be powered off either.",
                         "id": "PM_POWER_DOWN_PERIPHERAL_IN_LIGHT_SLEEP",
                         "name": "PM_POWER_DOWN_PERIPHERAL_IN_LIGHT_SLEEP",
                         "range": null,
@@ -12241,26 +12351,6 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SPI_MASTER_ISR_IN_IRAM",
-                        "help": "Enable this option to place SPI master hal layer functions into IRAM.",
-                        "id": "HAL_SPI_MASTER_FUNC_IN_IRAM",
-                        "name": "HAL_SPI_MASTER_FUNC_IN_IRAM",
-                        "range": null,
-                        "title": null,
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "SPI_SLAVE_ISR_IN_IRAM",
-                        "help": "Enable this option to place SPI slave hal layer functions into IRAM.",
-                        "id": "HAL_SPI_SLAVE_FUNC_IN_IRAM",
-                        "name": "HAL_SPI_SLAVE_FUNC_IN_IRAM",
-                        "range": null,
-                        "title": null,
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
                         "depends_on": "IDF_TARGET_ESP32H2",
                         "help": "Enable this option to apply the countermeasure for ECDSA signature operation\nThis countermeasure masks the real ECDSA sign operation\nunder dummy sign operations to add randomness in the generated power signature.\nThis countermeasure is only necessary for ESP32-H2 < v1.2.",
                         "id": "HAL_ECDSA_GEN_SIG_CM",
@@ -12907,16 +12997,6 @@
                         "range": null,
                         "title": "Local netif hostname",
                         "type": "string"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "If this feature is enabled, standard POSIX APIs: if_indextoname(), if_nametoindex()\ncould be used to convert network interface index to name\ninstead of IDF specific esp-netif APIs (such as esp_netif_get_netif_impl_name())",
-                        "id": "LWIP_NETIF_API",
-                        "name": "LWIP_NETIF_API",
-                        "range": null,
-                        "title": "Enable usage of standard POSIX APIs in LWIP",
-                        "type": "bool"
                     },
                     {
                         "children": [],
@@ -16564,6 +16644,16 @@
                     {
                         "children": [],
                         "depends_on": "ESP_ROM_HAS_MBEDTLS_CRYPTO_LIB",
+                        "help": "Enable this flag to use mbedtls crypto algorithm from ROM instead of ESP-IDF\nin case of a bootloader build.\nSimilar to the MBEDTLS_USE_CRYPTO_ROM_IMPL config but enables usage of the\nmbedtls crypto algorithm from ROM for the bootloader build.",
+                        "id": "MBEDTLS_USE_CRYPTO_ROM_IMPL_BOOTLOADER",
+                        "name": "MBEDTLS_USE_CRYPTO_ROM_IMPL_BOOTLOADER",
+                        "range": null,
+                        "title": "Use ROM implementation of the crypto algorithm in the bootloader",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "ESP_ROM_HAS_MBEDTLS_CRYPTO_LIB",
                         "help": "Enable this flag to use mbedtls crypto algorithm from ROM instead of ESP-IDF.\n\nThis configuration option saves flash footprint in the application binary.\nNote that the version of mbedtls crypto algorithm library in ROM(ECO1~ECO3) is v2.16.12,\nand the version of mbedtls crypto algorithm library in ROM(ECO4) is v3.6.0.\nWe have done the security analysis of the mbedtls revision in ROM (ECO1~ECO4)\nand ensured that affected symbols have been patched (removed). If in the future\nmbedtls revisions there are security issues that also affects the version in\nROM (ECO1~ECO4) then we shall patch the relevant symbols. This would increase\nthe flash footprint and hence care must be taken to keep some reserved space\nfor the application binary in flash layout.",
                         "id": "MBEDTLS_USE_CRYPTO_ROM_IMPL",
                         "name": "MBEDTLS_USE_CRYPTO_ROM_IMPL",
@@ -17204,6 +17294,16 @@
                                 "range": null,
                                 "title": "Check flash status automatically after flash suspend",
                                 "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
+                                "help": "When disabled, certain functions in `spi_flash` component will be placed into Flash memory\ninstead of IRAM. Disabling this option will save almost 10KB of IRAM depending on which\nfunctions are used.\n\nWhen enabled, these functions will be placed in internal RAM, with better performance.\n\nFor more information please refer to programming guide.",
+                                "id": "SPI_FLASH_PLACE_FUNCTIONS_IN_IRAM",
+                                "name": "SPI_FLASH_PLACE_FUNCTIONS_IN_IRAM",
+                                "range": null,
+                                "title": "Place spi_flash operation functions into IRAM",
+                                "type": "bool"
                             }
                         ],
                         "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
@@ -17243,7 +17343,7 @@
                             }
                         ],
                         "depends_on": "!SPI_FLASH_ROM_IMPL && !APP_BUILD_TYPE_PURE_RAM_APP",
-                        "help": "If this option is enabled, any time SPI flash is written then the data will be read\nback and verified. This can catch hardware problems with SPI flash, or flash which\nwas not erased before verification.",
+                        "help": "If this option is enabled, any time SPI flash is written then the data will be read\nback and verified. This can catch hardware problems with SPI flash, or flash which\nwas not erased before verification.\n\nThis will slightly influence the write performance.",
                         "id": "SPI_FLASH_VERIFY_WRITE",
                         "name": "SPI_FLASH_VERIFY_WRITE",
                         "range": null,
@@ -22453,7 +22553,7 @@
     {
         "children": [],
         "depends_on": null,
-        "help": "By enabling this option, ESP-IDF experimental feature options will be visible.\n\nNote you should still enable a certain experimental feature option to use it, and you\nshould read the corresponding risk warning and known issue list carefully.\n\nCurrent experimental feature list:\n\n- CONFIG_ESPTOOLPY_FLASHFREQ_120M && CONFIG_ESPTOOLPY_FLASH_SAMPLE_MODE_DTR\n- CONFIG_SPIRAM_SPEED_120M && CONFIG_SPIRAM_MODE_OCT\n- CONFIG_BOOTLOADER_CACHE_32BIT_ADDR_QUAD_FLASH\n- CONFIG_ESP_WIFI_EAP_TLS1_3\n- CONFIG_ESP_WIFI_ENABLE_ROAMING_APP\n- CONFIG_USB_HOST_EXT_PORT_SUPPORT_LS\n- CONFIG_USB_HOST_EXT_PORT_RESET_ATTEMPTS\n- CONFIG_LIBC_PICOLIBC",
+        "help": "By enabling this option, ESP-IDF experimental feature options will be visible.\n\nNote you should still enable a certain experimental feature option to use it, and you\nshould read the corresponding risk warning and known issue list carefully.\n\nCurrent experimental feature list:\n\n- CONFIG_ESPTOOLPY_FLASHFREQ_120M && CONFIG_ESPTOOLPY_FLASH_SAMPLE_MODE_DTR\n- CONFIG_SPIRAM_SPEED_120M && CONFIG_SPIRAM_MODE_OCT\n- CONFIG_BOOTLOADER_CACHE_32BIT_ADDR_QUAD_FLASH\n- CONFIG_ESP_WIFI_EAP_TLS1_3\n- CONFIG_ESP_WIFI_ENABLE_ROAMING_APP\n- CONFIG_USB_HOST_EXT_PORT_RESET_ATTEMPTS\n- CONFIG_LIBC_PICOLIBC",
         "id": "IDF_EXPERIMENTAL_FEATURES",
         "name": "IDF_EXPERIMENTAL_FEATURES",
         "range": null,

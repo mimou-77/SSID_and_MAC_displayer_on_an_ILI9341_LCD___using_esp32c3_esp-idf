@@ -8,7 +8,9 @@
  
 static const char * TAG = "main";
 
-
+uint8_t * supla_device_ssid = NULL ;
+char supla_device_mac[18] = {0} ;
+char  char_supla_device_ssid[21] = {0};
 
 void app_main(void)
 {
