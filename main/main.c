@@ -57,7 +57,7 @@ void app_main(void)
 
     while(1)
     {   update_label_ok_nok();
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 
 }

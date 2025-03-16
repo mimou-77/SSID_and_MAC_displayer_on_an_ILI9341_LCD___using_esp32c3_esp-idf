@@ -390,9 +390,9 @@ void update_label_ok_nok()
     }
     else if (btn_nok_pressed)
     {   
+        lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
         lv_obj_align(label_ok_nok, LV_ALIGN_CENTER, 90, -75);
         lv_obj_set_style_text_color(label_ok_nok, lv_color_hex(0xff0909), LV_PART_MAIN);
-        lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
         lv_label_set_text(label_ok_nok, LV_SYMBOL_CLOSE "NOK");
     }
     

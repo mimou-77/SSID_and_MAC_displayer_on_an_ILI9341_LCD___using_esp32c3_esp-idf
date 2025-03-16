@@ -19,6 +19,7 @@ void btns_init()
 {
 
     gpio_install_isr_service(0);
+
     gpio_reset_pin(7);
     const gpio_config_t btn_ok_gpio_cfg =
     {
@@ -31,17 +32,17 @@ void btns_init()
     gpio_intr_enable(7);
     gpio_isr_handler_add(7, btn_ok_isr , NULL);
 
-    gpio_reset_pin(9);
+    gpio_reset_pin(0);
     const gpio_config_t btn_nok_gpio_cfg =
     {
         .mode = GPIO_MODE_INPUT,
-        .pin_bit_mask = 1ULL << 9,
-        .pull_down_en = GPIO_PULLDOWN_ENABLE,
+        .pin_bit_mask = 1ULL << 0,
+        .pull_down_en = GPIO_PULLDOWN_ONLY,
         .intr_type = GPIO_INTR_POSEDGE,
     };
     gpio_config(&btn_nok_gpio_cfg);
-    gpio_intr_enable(9);
-    gpio_isr_handler_add(9, btn_nok_isr , NULL);
+    gpio_intr_enable(0);
+    gpio_isr_handler_add(0, btn_nok_isr , NULL);
 
     ESP_LOGI(TAG, "btn_pins config done");
 
@@ -64,16 +65,18 @@ void btn_log_task()
 {
     while(1)
     {
+        
         if(btn_ok_pressed)
         {
-            vTaskDelay(500/portTICK_PERIOD_MS);
+            vTaskDelay(10/portTICK_PERIOD_MS);
             btn_ok_pressed = false;
             ESP_LOGI(TAG, "btn_ok pressed");
         }
-        else if (btn_nok_pressed)
+
+        if (btn_nok_pressed)
         {
-            vTaskDelay(500/portTICK_PERIOD_MS);
-            btn_ok_pressed = false;
+            vTaskDelay(10/portTICK_PERIOD_MS);
+            btn_nok_pressed = false;
             ESP_LOGI(TAG, "btn_nok pressed");
         }
 
