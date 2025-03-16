@@ -17,7 +17,7 @@ typedef struct
 
 extern uint8_t * supla_device_ssid ;
 extern char supla_device_mac[18] ;
-extern char  char_supla_device_ssid[21];
+extern char char_supla_device_ssid[21];
 
 
 /*******************************************************

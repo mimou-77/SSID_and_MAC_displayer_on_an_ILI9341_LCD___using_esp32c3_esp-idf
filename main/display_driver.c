@@ -1,5 +1,6 @@
 #include "display_driver.h"
 #include "scan_app.h"
+#include "btn_driver.h"
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -18,6 +19,10 @@
 #include "esp_log.h"
 #include "lvgl.h"
 #include "esp_lcd_ili9341.h"
+
+
+static lv_obj_t *label_ok_nok = NULL; 
+
 
 /*******************************************************
  *                macros
@@ -60,8 +65,6 @@
 static const char *TAG = "display_driver";
 
 static _lock_t lvgl_api_lock; //lvgl APIs will br called from different tasks => mutex ; before every lvgl API call: aquire lock 
-
-
 
 // /*******************************************************
 //  *                functions implementations
@@ -279,10 +282,6 @@ void display_init()
     //label_ssid
     lv_obj_t *label_ssid = lv_label_create(lv_screen_active());
     
-    
-    
-
-
     const char * s = char_supla_device_ssid;
     lv_label_set_text(label_ssid, s);
     lv_obj_set_style_text_color(label_ssid, lv_color_hex(0xffffff), LV_PART_MAIN);
@@ -363,14 +362,40 @@ void display_init()
     lv_obj_set_style_text_align(label_mac, LV_TEXT_ALIGN_CENTER, 0);
     lv_obj_set_style_text_font(label_mac, &lv_font_montserrat_24, LV_PART_MAIN);
 
-    // const char * m = supla_device_mac;
-    // lv_label_set_text(label_mac, m);
-    // lv_obj_set_style_text_color(label_mac, lv_color_hex(0xffffff), LV_PART_MAIN);
-    // lv_obj_align(label_mac, LV_ALIGN_CENTER, 0, 0);
-    // lv_obj_set_width(label_mac, LCD_H_RES);
-    // lv_obj_set_style_text_align(label_mac, LV_TEXT_ALIGN_CENTER, 0);
-    // lv_obj_set_style_text_font(label_mac, &lv_font_montserrat_28, LV_PART_MAIN);  
+
+
+    //label_ok_nok
+    label_ok_nok = lv_label_create(lv_screen_active());
+    lv_obj_add_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_align(label_ok_nok, LV_ALIGN_CENTER, -90, -75);
+    lv_obj_set_style_text_font(label_ok_nok, &lv_font_montserrat_40, LV_PART_MAIN);
+    lv_obj_set_style_text_color(label_ok_nok, lv_color_hex(0x7cff00), LV_PART_MAIN);
+
 
 
     _lock_release(&lvgl_api_lock); //end ui
+}
+
+
+void update_label_ok_nok()
+{
+    _lock_acquire(&lvgl_api_lock);
+
+    if (btn_ok_pressed)
+    {
+        ESP_LOGI(TAG, "btn_ok_pressed = %d",btn_ok_pressed );
+
+        lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
+        lv_label_set_text(label_ok_nok, LV_SYMBOL_OK "OK");
+    }
+    else if (btn_nok_pressed)
+    {   
+        lv_obj_align(label_ok_nok, LV_ALIGN_CENTER, 90, -75);
+        lv_obj_set_style_text_color(label_ok_nok, lv_color_hex(0xff0909), LV_PART_MAIN);
+        lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
+        lv_label_set_text(label_ok_nok, LV_SYMBOL_CLOSE "NOK");
+    }
+    
+
+    _lock_release(&lvgl_api_lock);
 }

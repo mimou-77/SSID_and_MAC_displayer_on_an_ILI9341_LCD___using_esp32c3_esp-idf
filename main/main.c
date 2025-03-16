@@ -1,4 +1,5 @@
 #include "scan_app.h"
+#include "btn_driver.h"
 #include "display_driver.h"
 
 #include "esp_wifi.h"
@@ -10,7 +11,12 @@ static const char * TAG = "main";
 
 uint8_t * supla_device_ssid = NULL ;
 char supla_device_mac[18] = {0} ;
-char  char_supla_device_ssid[21] = {0};
+char char_supla_device_ssid[21] = {0} ;
+
+
+volatile bool btn_ok_pressed = false;
+volatile bool btn_nok_pressed = false;
+
 
 void app_main(void)
 {
@@ -26,20 +32,32 @@ void app_main(void)
         err = nvs_flash_init();
     }
 
-    wifi_scan();
+    btns_init();
     
+    wifi_scan();
+
+    if (supla_device_ssid == NULL)
+    {
+        ESP_LOGI(TAG, "supla_device_ssid = NULL");
+        
+    }
+    
+
     for (int i = 0; i < 21; i++)
     {
-        char_supla_device_ssid[i] = (char)supla_device_ssid[i];
+        char_supla_device_ssid[i] = (char)(supla_device_ssid[i]);
     }
     
 
     ESP_LOGI(TAG, "from main: uint8_t  ssid = %s", supla_device_ssid); //incorrect result (bad characters)
     ESP_LOGI(TAG, "from main: char ssid = %s", char_supla_device_ssid);
     
-
-    
-
     display_init();
+
+
+    while(1)
+    {   update_label_ok_nok();
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+    }
 
 }

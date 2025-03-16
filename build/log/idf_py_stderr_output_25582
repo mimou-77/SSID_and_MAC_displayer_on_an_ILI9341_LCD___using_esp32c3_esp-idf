@@ -1,0 +1,63 @@
+Command: /home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/mariem/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mariem/AP_displayer/build/AP_displayer.elf /home/mariem/AP_displayer/build/bootloader/bootloader.elf -m '/home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/mariem/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x403cbf10: esp_bootloader_get_description at /home/mariem/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39 (discriminator 1)
+[0m
+[0;33m--- 0x403ce710: esp_flash_encryption_enabled at /home/mariem/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+[0m
+[0;33m--- 0x403cbf1a: call_start_cpu0 at /home/mariem/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400318b4: __utoa in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x400318cc: __utoa in ROM
+0x40031da4: __itoa in ROM
+[0m
+[0;33m--- 0x4005890e: memset in ROM
+[0m
+[0;33m--- 0x403817f3: lock_acquire_generic at /home/mariem/esp-idf/components/newlib/src/locks.c:139
+0x403817f3: lock_acquire_generic at /home/mariem/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40058912: memset in ROM
+[0m
+[0;33m--- 0x40380001: _vector_table at /home/mariem/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- 0x400318cc: __utoa in ROM
+[0m
+[0;33m--- 0x400318cc: __utoa in ROM
+[0m
+[0;33m--- 0x40380870: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:112
+[0m
+[0;33m--- 0x403cbf10: esp_bootloader_get_description at /home/mariem/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39 (discriminator 1)
+[0m
+[0;33m--- 0x403ce710: esp_flash_encryption_enabled at /home/mariem/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+[0m
+[0;33m--- 0x403cbf1a: call_start_cpu0 at /home/mariem/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400318b4: __utoa in ROM
+[0m
+[0;33m--- 0x400318cc: __utoa in ROM
+0x40031da4: __itoa in ROM
+[0m
+[0;33m--- 0x4005890e: memset in ROM
+[0m
+[0;33m--- 0x403817f3: lock_acquire_generic at /home/mariem/esp-idf/components/newlib/src/locks.c:139
+0x403817f3: lock_acquire_generic at /home/mariem/esp-idf/components/newlib/src/locks.c:139
+[0m
+[0;33m--- 0x40058912: memset in ROM
+[0m
+[0;33m--- 0x40380001: _vector_table at /home/mariem/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- 0x400318cc: __utoa in ROM
+[0m
+[0;33m--- 0x400318cc: __utoa in ROM
+[0m
+[0;33m--- 0x40380870: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:112
+[0m
+[0;33m--- 0x403cbf10: esp_bootloader_get_description at /home/mariem/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39 (discriminator 1)
+[0m
+[0;33m--- 0x403ce710: esp_flash_encryption_enabled at /home/mariem/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+[0m
+[0;33m--- 0x403cbf1a: call_start_cpu0 at /home/mariem/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m

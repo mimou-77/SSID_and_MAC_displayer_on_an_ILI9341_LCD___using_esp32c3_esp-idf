@@ -4,8 +4,9 @@
 #define __DISPLAY_DRIVER_H__
 
 #include "scan_app.h"
-
 #include "display_driver.h"
+#include "btn_driver.h"
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
@@ -24,6 +25,7 @@
 #include "lvgl.h"
 #include "esp_lcd_ili9341.h"
 
+
 /*******************************************************
  *                functions headers
  *******************************************************/
@@ -36,10 +38,7 @@ static void lvgl_port_task(void * arg);
 
 void display_init();
 
-
-
-
-
+void update_label_ok_nok();
 
 
 

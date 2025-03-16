@@ -1,0 +1,300 @@
+Command: /home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/mariem/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mariem/AP_displayer/build/AP_displayer.elf /home/mariem/AP_displayer/build/bootloader/bootloader.elf -m '/home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/mariem/esp-idf/tools/idf.py'
+segment 2: paddr=0007d918 vaddr=40380000 size=02700h (  9984) �ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (32) boot: efuse block revision: v1.2[0m
+[0;32mI (36) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (40) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (74) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (80) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=6a9f0h (436720) map[0m
+[0;32mI (166) esp_image: segment 1: paddr=0007aa18 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0007d918 vaddr=40380000 size=02700h (  9984) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=ce398h (844696) map[0m
+[0;32mI (309) esp_image: segment 4: paddr=0014e3c0 vaddr=40382700 size=13758h ( 79704) load[0m
+[0;32mI (323) esp_image: segment 5: paddr=00161b20 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (330) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (330) boot: Disabling RNG early entropy source...[0m
+[0;32mI (341) cpu_start: Unicore app[0m
+[0;32mI (350) cpu_start: Pro cpu start user code[0m
+[0;32mI (350) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (350) app_init: Application information:[0m
+[0;32mI (350) app_init: Project name:     AP_displayer[0m
+[0;32mI (354) app_init: App version:      29fd7ef-dirty[0m
+[0;32mI (359) app_init: Compile time:     Mar 14 2025 14:12:03[0m
+[0;32mI (364) app_init: ELF file SHA256:  fe54f37a8...[0m
+[0;32mI (368) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (374) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (378) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (382) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (386) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (392) heap_init: At 3FCAD4F0 len 00012B10 (74 KiB): RAM[0m
+[0;32mI (397) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (403) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (409) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (415) spi_flash: detected chip: generic[0m
+[0;32mI (418) spi_flash: flash io: dio[0m
+[0;32mI (422) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (427) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (434) main_task: Started on CPU0[0m
+[0;32mI (464) main_task: Calling app_main()[0m
+[0;32mI (464) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (464) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (474) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (484) gpio: GPIO[9]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (494) btn_driver: btn_pins config done[0m
+[0;32mI (494) pp: pp rom version: 9387209[0m
+[0;32mI (494) net80211: net80211 rom version: 9387209[0m
+[0;32mI (514) wifi:wifi driver task: 3fcb6998, prio:23, stack:6656, core=0[0m
+[0;32mI (514) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (514) wifi:wifi certification version: v7.0[0m
+[0;32mI (514) wifi:config NVS flash: enabled[0m
+[0;32mI (514) wifi:config nano formatting: disabled[0m
+[0;32mI (524) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (524) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (534) wifi:Init management short buffer num: 32[0m
+[0;32mI (534) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (544) wifi:Init static rx buffer num: 10[0m
+[0;32mI (554) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (554) wifi_init: rx ba win: 6[0m
+[0;32mI (554) wifi_init: accept mbox: 6[0m
+[0;32mI (564) wifi_init: tcpip mbox: 32[0m
+[0;32mI (564) wifi_init: udp mbox: 6[0m
+[0;32mI (564) wifi_init: tcp mbox: 6[0m
+[0;32mI (574) wifi_init: tcp tx win: 5760[0m
+[0;32mI (574) wifi_init: tcp rx win: 5760[0m
+[0;32mI (574) wifi_init: tcp mss: 1440[0m
+[0;32mI (574) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (584) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (584) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (624) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (624) wifi:enable tsf[0m
+[0;32mI (3124) scan_app: total APs scanned = 4, size of APs list shown = 4[0m
+[0;32mI (3124) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3124) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3124) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3134) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3134) display_driver: config bl pin[0m
+[0;32mI (3144) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3154) display_driver: init spi bus[0m
+[0;32mI (3154) display_driver: init lcd panel io[0m
+[0;32mI (3154) display_driver: init ili9341 driver[0m
+[0;32mI (3164) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3164) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3294) display_driver: init lvgl[0m
+[0;32mI (3294) display_driver: init lv tick_timer[0m
+[0;32mI (3294) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3304) display_driver: create lvgl task[0m
+[0;32mI (3304) display_driver: starting lvgl task[0m
+[0;32mI (3374) display_driver: start ui [0m
+[0;32mI (3464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (3564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (3664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (3764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (3864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (3964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (4964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (5964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (6964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (7964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (8964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (9964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10134) btn_driver: btn_ok pressed[0m
+[0;32mI (10164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10284) btn_driver: btn_ok pressed[0m
+[0;32mI (10364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10774) btn_driver: btn_ok pressed[0m
+[0;32mI (10864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (10964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (11914) btn_driver: btn_ok pressed[0m
+[0;32mI (11964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12064) btn_driver: btn_ok pressed[0m
+[0;32mI (12064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (12964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13404) btn_driver: btn_ok pressed[0m
+[0;32mI (13464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (13964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14064) btn_driver: btn_ok pressed[0m
+[0;32mI (14064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14734) btn_driver: btn_ok pressed[0m
+[0;32mI (14764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (14964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15414) btn_driver: btn_ok pressed[0m
+[0;32mI (15464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (15964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16144) btn_driver: btn_ok pressed[0m
+[0;32mI (16164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16784) btn_driver: btn_ok pressed[0m
+[0;32mI (16864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (16944) btn_driver: btn_ok pressed[0m
+[0;32mI (16964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17304) btn_driver: btn_ok pressed[0m
+[0;32mI (17364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17424) btn_driver: btn_ok pressed[0m
+[0;32mI (17464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (17964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18234) btn_driver: btn_ok pressed[0m
+[0;32mI (18264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (18974) btn_driver: btn_ok pressed[0m
+[0;32mI (19064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (19964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20164) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20264) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20364) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20464) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20564) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20664) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20764) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20864) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (20964) display_driver: we just entered update_(); btn_ok_pressed = 0[0m
+[0;32mI (21064) display_driver: we just entered update_(); btn_ok_pressed = 0[0m

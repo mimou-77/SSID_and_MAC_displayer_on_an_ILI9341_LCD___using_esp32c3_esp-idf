@@ -20,7 +20,8 @@
         "lock.h": "c",
         "esp_wifi.h": "c",
         "scan_app.h": "c",
-        "display_driver.h": "c"
+        "display_driver.h": "c",
+        "btn_driver.h": "c"
     },
     "workbench.colorTheme": "Default Light+"
 }
