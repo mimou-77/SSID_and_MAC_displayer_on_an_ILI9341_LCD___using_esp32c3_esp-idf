@@ -254,6 +254,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/mariem/AP_displayer/build/esp-idf/spiffs/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/mariem/AP_displayer/build/esp-idf/esp_driver_pcnt/cmake_install.cmake")
 endif()
 

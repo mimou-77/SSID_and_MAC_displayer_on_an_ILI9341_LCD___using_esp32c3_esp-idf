@@ -56,6 +56,7 @@ void app_main(void)
     
     display_init();
 
+    init_spiffs();
 
     while(1)
     {   update_label_ok_nok();

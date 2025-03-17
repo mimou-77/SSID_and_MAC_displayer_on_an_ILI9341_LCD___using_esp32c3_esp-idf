@@ -426,6 +426,13 @@
 /home/mariem/AP_displayer/build/esp-idf/esp_wifi/CMakeFiles/install.dir
 /home/mariem/AP_displayer/build/esp-idf/esp_wifi/CMakeFiles/install/local.dir
 /home/mariem/AP_displayer/build/esp-idf/esp_wifi/CMakeFiles/install/strip.dir
+/home/mariem/AP_displayer/build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir
+/home/mariem/AP_displayer/build/esp-idf/spiffs/CMakeFiles/edit_cache.dir
+/home/mariem/AP_displayer/build/esp-idf/spiffs/CMakeFiles/rebuild_cache.dir
+/home/mariem/AP_displayer/build/esp-idf/spiffs/CMakeFiles/list_install_components.dir
+/home/mariem/AP_displayer/build/esp-idf/spiffs/CMakeFiles/install.dir
+/home/mariem/AP_displayer/build/esp-idf/spiffs/CMakeFiles/install/local.dir
+/home/mariem/AP_displayer/build/esp-idf/spiffs/CMakeFiles/install/strip.dir
 /home/mariem/AP_displayer/build/esp-idf/esp_driver_pcnt/CMakeFiles/edit_cache.dir
 /home/mariem/AP_displayer/build/esp-idf/esp_driver_pcnt/CMakeFiles/rebuild_cache.dir
 /home/mariem/AP_displayer/build/esp-idf/esp_driver_pcnt/CMakeFiles/list_install_components.dir

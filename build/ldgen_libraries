@@ -37,6 +37,7 @@
 /home/mariem/AP_displayer/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
 /home/mariem/AP_displayer/build/esp-idf/esp_coex/libesp_coex.a
 /home/mariem/AP_displayer/build/esp-idf/esp_wifi/libesp_wifi.a
+/home/mariem/AP_displayer/build/esp-idf/spiffs/libspiffs.a
 /home/mariem/AP_displayer/build/esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a
 /home/mariem/AP_displayer/build/esp-idf/esp_driver_spi/libesp_driver_spi.a
 /home/mariem/AP_displayer/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a

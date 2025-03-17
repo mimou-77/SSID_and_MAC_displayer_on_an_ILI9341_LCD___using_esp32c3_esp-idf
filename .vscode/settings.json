@@ -21,7 +21,8 @@
         "esp_wifi.h": "c",
         "scan_app.h": "c",
         "display_driver.h": "c",
-        "btn_driver.h": "c"
+        "btn_driver.h": "c",
+        "esp_spiffs.h": "c"
     },
     "workbench.colorTheme": "Default Light+"
 }
