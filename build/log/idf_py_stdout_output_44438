@@ -1,0 +1,2645 @@
+Command: /home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/mariem/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mariem/AP_displayer/build/AP_displayer.elf /home/mariem/AP_displayer/build/bootloader/bootloader.elf -m '/home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/mariem/esp-idf/tools/idf.py'
+[0;32mI (167) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (171) esp_ESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (32) boot: efuse block revision: v1.2[0m
+[0;32mI (36) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (40) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (74) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (80) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (167) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (171) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (315) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (331) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (337) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (337) boot: Disabling RNG early entropy source...[0m
+[0;32mI (349) cpu_start: Unicore app[0m
+[0;32mI (357) cpu_start: Pro cpu start user code[0m
+[0;32mI (357) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (357) app_init: Application information:[0m
+[0;32mI (357) app_init: Project name:     AP_displayer[0m
+[0;32mI (362) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (366) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (371) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (376) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (382) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (385) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (389) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (393) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (399) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (405) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (411) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (417) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (423) spi_flash: detected chip: generic[0m
+[0;32mI (426) spi_flash: flash io: dio[0m
+[0;32mI (429) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (435) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (442) main_task: Started on CPU0[0m
+[0;32mI (472) main_task: Calling app_main()[0m
+[0;32mI (472) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (472) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (482) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (492) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (492) btn_driver: btn_pins config done[0m
+[0;32mI (502) pp: pp rom version: 9387209[0m
+[0;32mI (502) net80211: net80211 rom version: 9387209[0m
+[0;32mI (522) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (522) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (522) wifi:wifi certification version: v7.0[0m
+[0;32mI (522) wifi:config NVS flash: enabled[0m
+[0;32mI (522) wifi:config nano formatting: disabled[0m
+[0;32mI (532) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (542) wifi:Init management short buffer num: 32[0m
+[0;32mI (542) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (552) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (552) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (552) wifi:Init static rx buffer num: 10[0m
+[0;32mI (562) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (562) wifi_init: rx ba win: 6[0m
+[0;32mI (562) wifi_init: accept mbox: 6[0m
+[0;32mI (572) wifi_init: tcpip mbox: 32[0m
+[0;32mI (572) wifi_init: udp mbox: 6[0m
+[0;32mI (572) wifi_init: tcp mbox: 6[0m
+[0;32mI (582) wifi_init: tcp tx win: 5760[0m
+[0;32mI (582) wifi_init: tcp rx win: 5760[0m
+[0;32mI (582) wifi_init: tcp mss: 1440[0m
+[0;32mI (582) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (592) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (592) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (642) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (642) wifi:enable tsf[0m
+[0;32mI (3152) scan_app: total APs scanned = 9, size of APs list shown = 9[0m
+[0;32mI (3152) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3152) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3152) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3162) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3162) display_driver: config bl pin[0m
+[0;32mI (3172) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3182) display_driver: init spi bus[0m
+[0;32mI (3182) display_driver: init lcd panel io[0m
+[0;32mI (3182) display_driver: init ili9341 driver[0m
+[0;32mI (3192) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3202) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3322) display_driver: init lvgl[0m
+[0;32mI (3322) display_driver: init lv tick_timer[0m
+[0;32mI (3322) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3332) display_driver: create lvgl task[0m
+[0;32mI (3332) display_driver: starting lvgl task[0m
+[0;32mI (3402) display_driver: start ui [0m
+[0;32mI (3512) lists_lib: partition size: total = 956561, used = 502[0m
+[0;32mI (7282) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (7292) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0xffffffff  T1      : 0x70000000  T2      : 0xffffffff  
+S0/FP   : 0x00000000  S1      : 0x000001ba  A0      : 0x000001ba  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000002  A5      : 0x000001ba  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0xffffffff  T5      : 0xffffffff  T6      : 0xffffffff  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001ba  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (847) btn_driver: btn_ok pressed[0m
+[0;32mI (887) btn_driver: btn_ok pressed[0m
+[0;32mI (1637) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 9, size of APs list shown = 9[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 502[0m
+[0;32mI (4307) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (4317) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x64663a64  T1      : 0x40000000  T2      : 0x663a6139  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x3a61393a  T5      : 0x61343a63  T6      : 0x653a3432  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (737) btn_driver: btn_ok pressed[0m
+[0;32mI (767) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 9, size of APs list shown = 9[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 502[0m
+[0;32mI (13237) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (13247) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x64663a64  T1      : 0x10000000  T2      : 0x663a6139  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000005  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x3a61393a  T5      : 0x61343a63  T6      : 0x653a3432  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (3137) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 502[0m
+[0;32mI (53067) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (53077) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x34326466  T1      : 0x50000000  T2      : 0x3a64663a  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000005  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x64663a61  T5      : 0x393a6134  T6      : 0x3a63653a  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (877) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 502[0m
+[0;32mI (21417) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (21427) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x34326466  T1      : 0x20000000  T2      : 0x3a64663a  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000005  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x64663a61  T5      : 0x393a6134  T6      : 0x3a63653a  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (3137) scan_app: total APs scanned = 11, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 502[0m
+[0;32mI (4827) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (4837) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x40000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (3137) scan_app: total APs scanned = 9, size of APs list shown = 9[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 502[0m
+[0;32mI (7667) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (7677) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x70000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (697) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (697) wifi:enable tsf[0m
+[0;32mI (1807) btn_driver: btn_ok pressed[0m
+[0;32mI (3197) scan_app: total APs scanned = 9, size of APs list shown = 9[0m
+[0;32mI (3197) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3197) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3197) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3207) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3207) display_driver: config bl pin[0m
+[0;32mI (3217) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3227) display_driver: init spi bus[0m
+[0;32mI (3227) display_driver: init lcd panel io[0m
+[0;32mI (3227) display_driver: init ili9341 driver[0m
+[0;32mI (3237) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3247) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3367) display_driver: init lvgl[0m
+[0;32mI (3367) display_driver: init lv tick_timer[0m
+[0;32mI (3367) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3377) display_driver: create lvgl task[0m
+[0;32mI (3377) display_driver: starting lvgl task[0m
+[0;32mI (3447) display_driver: start ui [0m
+[0;32mI (3557) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (5327) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (5337) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x50000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (3137) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (4877) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (4887) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x40000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (637) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3217) btn_driver: btn_ok pressed[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (3987) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (3997) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x30000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (1737) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 8, size of APs list shown = 8[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (4717) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (4727) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x40000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (647) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (647) wifi:enable tsf[0m
+[0;32mI (2887) btn_driver: btn_ok pressed[0m
+[0;32mI (3147) scan_app: total APs scanned = 9, size of APs list shown = 9[0m
+[0;32mI (3147) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3147) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3157) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3157) display_driver: config bl pin[0m
+[0;32mI (3167) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3177) display_driver: init spi bus[0m
+[0;32mI (3177) display_driver: init lcd panel io[0m
+[0;32mI (3177) display_driver: init ili9341 driver[0m
+[0;32mI (3187) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3317) display_driver: init lvgl[0m
+[0;32mI (3317) display_driver: init lv tick_timer[0m
+[0;32mI (3317) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3327) display_driver: create lvgl task[0m
+[0;32mI (3327) display_driver: starting lvgl task[0m
+[0;32mI (3397) display_driver: start ui [0m
+[0;32mI (3507) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (44317) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (44327) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x40000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000005  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (3137) scan_app: total APs scanned = 9, size of APs list shown = 9[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (4197) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (4207) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x40000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (2897) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (8217) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (8227) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x80000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (3137) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (5297) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (5307) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x50000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (3137) scan_app: total APs scanned = 8, size of APs list shown = 8[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (34737) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (34747) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x30000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000005  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (1537) btn_driver: btn_ok pressed[0m
+[0;32mI (2337) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 12, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (3687) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (3697) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x30000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (647) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (647) wifi:enable tsf[0m
+[0;32mI (1737) btn_driver: btn_ok pressed[0m
+[0;32mI (1757) btn_driver: btn_ok pressed[0m
+[0;32mI (1777) btn_driver: btn_ok pressed[0m
+[0;32mI (1817) btn_driver: btn_ok pressed[0m
+[0;32mI (1957) btn_driver: btn_ok pressed[0m
+[0;32mI (2087) btn_driver: btn_ok pressed[0m
+[0;32mI (2727) btn_driver: btn_ok pressed[0m
+[0;32mI (2787) btn_driver: btn_ok pressed[0m
+[0;32mI (3027) btn_driver: btn_ok pressed[0m
+[0;32mI (3147) scan_app: total APs scanned = 9, size of APs list shown = 9[0m
+[0;32mI (3147) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3147) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3157) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3157) display_driver: config bl pin[0m
+[0;32mI (3167) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3177) display_driver: init spi bus[0m
+[0;32mI (3177) display_driver: init lcd panel io[0m
+[0;32mI (3177) display_driver: init ili9341 driver[0m
+[0;32mI (3187) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3317) display_driver: init lvgl[0m
+[0;32mI (3317) display_driver: init lv tick_timer[0m
+[0;32mI (3317) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3327) display_driver: create lvgl task[0m
+[0;32mI (3327) display_driver: starting lvgl task[0m
+[0;32mI (3397) display_driver: start ui [0m
+[0;32mI (3507) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (21207) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (21217) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x20000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000005  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (2277) btn_driver: btn_ok pressed[0m
+[0;32mI (2297) btn_driver: btn_ok pressed[0m
+[0;32mI (2637) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m
+[0;32mI (4357) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (4367) btn_driver: btn_ok pressed[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40058e94  RA      : 0x420c97e0  SP      : 0x3fcafb90  GP      : 0x3fc96800  
+TP      : 0x3fcb01c0  T0      : 0x653a3432  T1      : 0x40000000  T2      : 0x64663a64  
+S0/FP   : 0x00000000  S1      : 0x000001bf  A0      : 0x000001bf  A1      : 0x3c0e520c  
+A2      : 0x00000003  A3      : 0x3fcb0048  A4      : 0x00000003  A5      : 0x000001bf  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x3c114000  S3      : 0x00000002  
+S4      : 0xffffffff  S5      : 0x00000003  S6      : 0x00000004  S7      : 0x00000073  
+S8      : 0x00000002  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x3fcafcb4  
+T3      : 0x00000000  T4      : 0x663a6466  T5      : 0x3a61393a  T6      : 0x61343a63  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x000001bf  
+MHARTID : 0x00000000  
+Backtrace: 0x40058e94:0x3fcafb90
+Backtrace ended abruptly: cannot find DWARF information for instruction at address 0x40058e94
+
+
+
+
+ELF file SHA256: 7def0c057
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380870
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (37) boot: efuse block revision: v1.2[0m
+[0;32mI (41) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (45) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cb40h (445248) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=0007cb68 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=0007fa68 vaddr=40380000 size=005b0h (  1456) load[0m
+[0;32mI (176) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d50cch (872652) map[0m
+[0;32mI (320) esp_image: segment 4: paddr=001550f4 vaddr=403805b0 size=158a8h ( 88232) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=0016a9a4 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (342) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (342) boot: Disabling RNG early entropy source...[0m
+[0;32mI (354) cpu_start: Unicore app[0m
+[0;32mI (362) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (362) app_init: Project name:     AP_displayer[0m
+[0;32mI (367) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (371) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (376) app_init: ELF file SHA256:  7def0c057...[0m
+[0;32mI (380) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (386) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (390) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (415) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (421) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;32mI (434) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (440) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (477) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (487) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (497) btn_driver: btn_pins config done[0m
+[0;32mI (507) pp: pp rom version: 9387209[0m
+[0;32mI (507) net80211: net80211 rom version: 9387209[0m
+[0;32mI (527) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (637) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (637) wifi:enable tsf[0m
+[0;32mI (3067) btn_driver: btn_ok pressed[0m
+[0;32mI (3137) scan_app: total APs scanned = 11, size of APs list shown = 10[0m
+[0;32mI (3137) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3137) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3137) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3147) display_driver: config bl pin[0m
+[0;32mI (3157) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3167) display_driver: init spi bus[0m
+[0;32mI (3167) display_driver: init lcd panel io[0m
+[0;32mI (3167) display_driver: init ili9341 driver[0m
+[0;32mI (3177) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3187) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3307) display_driver: init lvgl[0m
+[0;32mI (3307) display_driver: init lv tick_timer[0m
+[0;32mI (3307) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3317) display_driver: create lvgl task[0m
+[0;32mI (3317) display_driver: starting lvgl task[0m
+[0;32mI (3387) display_driver: start ui [0m
+[0;32mI (3497) lists_lib: partition size: total = 956561, used = 753[0m

@@ -1,0 +1,222 @@
+Command: /home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/mariem/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mariem/AP_displayer/build/AP_displayer.elf /home/mariem/AP_displayer/build/bootloader/bootloader.elf -m '/home/mariem/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/mariem/esp-idf/tools/idf.py'
+=02ef8h ( 12024) load
+I (17�ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b8
+load:0x403cbf10,len:0xc30
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Mar 14 2025 14:12:07[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (32) boot: efuse block revision: v1.2[0m
+[0;32mI (36) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (40) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (74) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (80) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=6cc0ch (445452) map[0m
+[0;32mI (167) esp_image: segment 1: paddr=0007cc34 vaddr=3fc96000 size=02ef8h ( 12024) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0007fb34 vaddr=40380000 size=004e4h (  1252) load[0m
+[0;32mI (171) esp_image: segment 3: paddr=00080020 vaddr=42000020 size=d5314h (873236) map[0m
+[0;32mI (315) esp_image: segment 4: paddr=0015533c vaddr=403804e4 size=15974h ( 88436) load[0m
+[0;32mI (331) esp_image: segment 5: paddr=0016acb8 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (338) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (338) boot: Disabling RNG early entropy source...[0m
+[0;32mI (349) cpu_start: Unicore app[0m
+[0;32mI (357) cpu_start: Pro cpu start user code[0m
+[0;32mI (357) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (358) app_init: Application information:[0m
+[0;32mI (358) app_init: Project name:     AP_displayer[0m
+[0;32mI (362) app_init: App version:      8c494ee-dirty[0m
+[0;32mI (366) app_init: Compile time:     Mar 17 2025 12:51:07[0m
+[0;32mI (371) app_init: ELF file SHA256:  c453b8358...[0m
+[0;32mI (376) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (382) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (386) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (389) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (393) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (400) heap_init: At 3FCAD500 len 00012B00 (74 KiB): RAM[0m
+[0;32mI (405) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (411) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (417) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (423) spi_flash: detected chip: generic[0m
+[0;32mI (426) spi_flash: flash io: dio[0m
+[0;32mI (429) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (435) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (442) main_task: Started on CPU0[0m
+[0;32mI (472) main_task: Calling app_main()[0m
+[0;32mI (472) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (472) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (482) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (492) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (492) btn_driver: btn_pins config done[0m
+[0;32mI (502) pp: pp rom version: 9387209[0m
+[0;32mI (502) net80211: net80211 rom version: 9387209[0m
+[0;32mI (522) wifi:wifi driver task: 3fcb69a8, prio:23, stack:6656, core=0[0m
+[0;32mI (522) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (522) wifi:wifi certification version: v7.0[0m
+[0;32mI (522) wifi:config NVS flash: enabled[0m
+[0;32mI (522) wifi:config nano formatting: disabled[0m
+[0;32mI (532) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (542) wifi:Init management short buffer num: 32[0m
+[0;32mI (542) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (552) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (552) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (552) wifi:Init static rx buffer num: 10[0m
+[0;32mI (562) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (562) wifi_init: rx ba win: 6[0m
+[0;32mI (562) wifi_init: accept mbox: 6[0m
+[0;32mI (572) wifi_init: tcpip mbox: 32[0m
+[0;32mI (572) wifi_init: udp mbox: 6[0m
+[0;32mI (572) wifi_init: tcp mbox: 6[0m
+[0;32mI (582) wifi_init: tcp tx win: 5760[0m
+[0;32mI (582) wifi_init: tcp rx win: 5760[0m
+[0;32mI (582) wifi_init: tcp mss: 1440[0m
+[0;32mI (582) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (592) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (592) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (632) wifi:mode : sta (58:cf:79:e1:85:b8)[0m
+[0;32mI (642) wifi:enable tsf[0m
+[0;32mI (3142) scan_app: total APs scanned = 10, size of APs list shown = 10[0m
+[0;32mI (3142) scan_app: SUPLA device found : SSID = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3142) scan_app:                      MAC = 24:ec:4a:9a:fd:fd[0m
+[0;32mI (3142) main: from main: uint8_t  ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3152) main: from main: char ssid = SOMEF-R1-24EC4A9AFDFC[0m
+[0;32mI (3152) display_driver: config bl pin[0m
+[0;32mI (3162) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3172) display_driver: init spi bus[0m
+[0;32mI (3172) display_driver: init lcd panel io[0m
+[0;32mI (3172) display_driver: init ili9341 driver[0m
+[0;32mI (3182) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3192) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3312) display_driver: init lvgl[0m
+[0;32mI (3312) display_driver: init lv tick_timer[0m
+[0;32mI (3312) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3322) display_driver: create lvgl task[0m
+[0;32mI (3322) display_driver: starting lvgl task[0m
+[0;32mI (3392) display_driver: start ui [0m
+[0;32mI (3512) lists_lib: file content of ok_lists.csv deleted[0m
+[0;32mI (3542) lists_lib: file content of nok_lists.csv deleted[0m
+[0;32mI (3542) lists_lib: partition size: total = 956561, used = 502[0m
+[0;32mI (164702) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (164702) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (164712) btn_driver: btn_ok pressed[0m
+[0;32mI (164752) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (164762) btn_driver: btn_ok pressed[0m
+[0;32mI (164762) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (164762) lists_lib: ok_list.csv line 1: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508712) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (1508712) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508712) lists_lib: ok_list.csv line 1: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508712) lists_lib: ok_list.csv line 2: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508722) btn_driver: btn_ok pressed[0m
+[0;32mI (1508752) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (1508752) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508752) lists_lib: ok_list.csv line 1: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508752) lists_lib: ok_list.csv line 2: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508762) btn_driver: btn_ok pressed[0m
+[0;32mI (1508772) lists_lib: ok_list.csv line 3: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508782) btn_driver: btn_ok pressed[0m
+[0;32mI (1508972) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (1508972) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508972) lists_lib: ok_list.csv line 1: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508972) lists_lib: ok_list.csv line 2: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508972) lists_lib: ok_list.csv line 3: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1508982) btn_driver: btn_ok pressed[0m
+[0;32mI (1508982) lists_lib: ok_list.csv line 4: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509572) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (1509572) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509572) lists_lib: ok_list.csv line 1: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509572) lists_lib: ok_list.csv line 2: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509582) btn_driver: btn_ok pressed[0m
+[0;32mI (1509582) lists_lib: ok_list.csv line 3: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509582) lists_lib: ok_list.csv line 4: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509592) lists_lib: ok_list.csv line 5: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509942) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (1509942) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509942) lists_lib: ok_list.csv line 1: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509942) lists_lib: ok_list.csv line 2: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509952) btn_driver: btn_ok pressed[0m
+[0;32mI (1509952) lists_lib: ok_list.csv line 3: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509952) lists_lib: ok_list.csv line 4: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509962) lists_lib: ok_list.csv line 5: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509972) btn_driver: btn_ok pressed[0m
+[0;32mI (1509972) lists_lib: ok_list.csv line 6: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509982) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (1509982) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509982) lists_lib: ok_list.csv line 1: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1509992) btn_driver: btn_ok pressed[0m
+[0;32mI (1510002) lists_lib: ok_list.csv line 2: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510002) lists_lib: ok_list.csv line 3: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510002) lists_lib: ok_list.csv line 4: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510012) btn_driver: btn_ok pressed[0m
+[0;32mI (1510012) lists_lib: ok_list.csv line 5: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510022) lists_lib: ok_list.csv line 6: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510022) lists_lib: ok_list.csv line 7: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510162) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (1510162) lists_lib: ok_list.csv line 0: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510162) lists_lib: ok_list.csv line 1: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510162) lists_lib: ok_list.csv line 2: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510172) btn_driver: btn_ok pressed[0m
+[0;32mI (1510172) lists_lib: ok_list.csv line 3: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510172) lists_lib: ok_list.csv line 4: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510182) lists_lib: ok_list.csv line 5: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510192) lists_lib: ok_list.csv line 6: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510192) lists_lib: ok_list.csv line 7: 24:ec:4a:9a:fd:fd[0m
+
+[0;32mI (1510202) lists_lib: ok_list.csv line 8: 24:ec:4a:9a:fd:fd[0m
+
