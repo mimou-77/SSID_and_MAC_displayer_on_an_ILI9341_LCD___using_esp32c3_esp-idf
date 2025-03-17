@@ -1,6 +1,8 @@
 #include "scan_app.h"
+#include "lists_lib.h"
 #include "btn_driver.h"
 #include "display_driver.h"
+#include "lists_lib.h"
 
 #include "esp_wifi.h"
 #include "esp_log.h"
@@ -57,6 +59,7 @@ void app_main(void)
 
     while(1)
     {   update_label_ok_nok();
+        update_lists();
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 

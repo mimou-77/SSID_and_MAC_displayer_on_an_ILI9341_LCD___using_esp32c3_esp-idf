@@ -39,5 +39,4 @@ void btn_log_task();
 
 
 
-
 #endif // __BTN_DRIVER_H__
