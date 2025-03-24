@@ -5,6 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "~/esp-idf/components/**",
+                "~/esp-idf/examples/common_components/protocol_examples_common/**",
+                "~/esp-idf/examples/protocols/http_server/file_serving/main/**",
                 "./managed_components/**",
                 "~/esp-rainmaker/components/**",
                 "~/esp-rainmaker/examples/common/**",

@@ -4,6 +4,7 @@
 #define __SCAN_APP_H__
 
 #include <stdint.h>
+#include "esp_wifi.h"
 
 
 /*******************************************************
@@ -24,6 +25,7 @@ extern char char_supla_device_ssid[21];
  *                functions headers
  *******************************************************/
 void wifi_scan();
+
 
 
 

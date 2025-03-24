@@ -3,7 +3,13 @@ https://github.com/espressif/esp-idf/blob/master/examples/peripherals/lcd/spi_lc
 
 LCD driver = ILI9341
 
-this app searches for an AP which SSID starts with "somef" and displays its SSID and MAC address on the display.
+This app searches for an AP which SSID starts with "SOMEF" and displays its SSID and MAC address on the display.
 
-### later:
-compares the douchette scanned QR code infos with the mac address and tells if the MAC address of the device is the scanned one.
+The user then presses an "ok" button or a "nok" button, if "ok" button is pressed, the device mac is stored in a csv file
+named "ok_list", if "nok" button is pressed, the device mac is stored in a csv file named "nok_list". (files in esp32 FLASH)
+
+## Later: 
+console cmd :
+- delete mac from ok_list or nok_list
+- display ok_list or nok_list
+

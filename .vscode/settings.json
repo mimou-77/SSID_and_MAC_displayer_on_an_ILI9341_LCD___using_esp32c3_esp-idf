@@ -22,7 +22,10 @@
         "scan_app.h": "c",
         "display_driver.h": "c",
         "btn_driver.h": "c",
-        "esp_spiffs.h": "c"
+        "esp_spiffs.h": "c",
+        "example_common_private.h": "c",
+        "file_serving_example_common.h": "c",
+        "esp_http_server.h": "c"
     },
     "workbench.colorTheme": "Default Light+"
 }

@@ -77,11 +77,4 @@ void wifi_scan()
         
     }
 
-    // supla_ssid_mac_t supla_ssid_mac =
-    //     {
-    //         .supla_device_ssid = supla_device_ssid,
-    //         .supla_device_mac = supla_device_mac
-    //     };
-    //}//end while(1)
-    
 }

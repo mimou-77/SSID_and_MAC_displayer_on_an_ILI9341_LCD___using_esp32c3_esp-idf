@@ -8,6 +8,8 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 
+#include "esp_netif.h"
+
  
 static const char * TAG = "main";
 
@@ -38,6 +40,7 @@ void app_main(void)
     
     wifi_scan();
 
+
     if (supla_device_ssid == NULL)
     {
         ESP_LOGI(TAG, "supla_device_ssid = NULL");
@@ -57,6 +60,10 @@ void app_main(void)
     display_init();
 
     init_spiffs();
+
+    //connect to ssid/pw for the csv files transfer
+    
+
 
     while(1)
     {   update_label_ok_nok();

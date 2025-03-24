@@ -19,15 +19,15 @@ void init_spiffs()
 
     esp_err_t err = esp_vfs_spiffs_register(&conf);
 
-    //change later
-    //delete content of ok_list.csv and nok_list.csv
-    FILE * ok_file_d = fopen("/spiffs/ok_list.csv", "w");
-    fclose(ok_file_d);
-    ESP_LOGI(TAG, "file content of ok_lists.csv deleted");
-    FILE * nok_file_d = fopen("/spiffs/nok_list.csv", "w");
-    fclose(nok_file_d);
-    ESP_LOGI(TAG, "file content of nok_lists.csv deleted");
-    //change later
+    //changed
+    // //delete content of ok_list.csv and nok_list.csv
+    // FILE * ok_file_d = fopen("/spiffs/ok_list.csv", "w");
+    // fclose(ok_file_d);
+    // ESP_LOGI(TAG, "file content of ok_lists.csv deleted");
+    // FILE * nok_file_d = fopen("/spiffs/nok_list.csv", "w");
+    // fclose(nok_file_d);
+    // ESP_LOGI(TAG, "file content of nok_lists.csv deleted");
+    
     //show content of ok_list.csv and nok_list.csv
     FILE * ok_file_l = fopen("/spiffs/ok_list.csv", "r");
         if (ok_file_l == NULL)
