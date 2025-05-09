@@ -41,14 +41,14 @@ static lv_obj_t *label_ok_nok = NULL;
 #define LCD_BL_ON_LEVEL 	 1
 #define LCD_BL_OFF_LEVEL 	 !LCD_BL_ON_LEVEL
 
-#define LCD_SPI_NUM 	 SPI2_HOST
-#define LCD_GPIO_SCLK 	 18
-#define LCD_GPIO_MOSI 	 19
+#define LCD_SPI_NUM 	 SPI3_HOST
+#define LCD_GPIO_SCLK 	 36
+#define LCD_GPIO_MOSI 	 35
 #define LCD_GPIO_MISO    -1
 #define LCD_GPIO_RST 	 3
-#define LCD_GPIO_DC 	 5
-#define LCD_GPIO_CS 	 4
-#define LCD_GPIO_BL 	 2
+#define LCD_GPIO_DC 	 9
+#define LCD_GPIO_CS 	 40
+#define LCD_GPIO_BL 	 38
 
 
 #define LVGL_DRAW_BUF_HEIGHT     20	 

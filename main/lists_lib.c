@@ -32,7 +32,7 @@ void init_spiffs()
     FILE * ok_file_l = fopen("/spiffs/ok_list.csv", "r");
         if (ok_file_l == NULL)
         {
-            ESP_LOGI(TAG, "failed to open file: %s", ok_file_l);
+            ESP_LOGI(TAG, "failed to open file: %s", "ok_file_l");
             return;
         }
     char line_ok[256]; //1 line of the file = 256 characters (max length)
@@ -44,7 +44,7 @@ void init_spiffs()
     FILE * nok_file_l = fopen("/spiffs/nok_list.csv", "r");
     if (nok_file_l == NULL)
     {
-        ESP_LOGI(TAG, "failed to open file: %s", nok_file_l);
+        ESP_LOGI(TAG, "failed to open file: %s", "nok_file_l");
         return;
     }
     char line_nok[256]; //1 line of the file = 256 characters (max length)
@@ -84,7 +84,7 @@ void update_lists()
         FILE * ok_file_l = fopen("/spiffs/ok_list.csv", "r");
         if (ok_file_l == NULL)
         {
-            ESP_LOGI(TAG, "failed to open file: %s", ok_file_l);
+            ESP_LOGI(TAG, "failed to open file: %s", "ok_file_l");
             return;
         }
         
@@ -114,7 +114,7 @@ void update_lists()
         FILE * nok_file_l = fopen("/spiffs/nok_list.csv", "r");
         if (nok_file_l == NULL)
         {
-            ESP_LOGI(TAG, "failed to open file: %s", nok_file_l);
+            ESP_LOGI(TAG, "failed to open file: %s", "nok_file_l");
             return;
         }
         

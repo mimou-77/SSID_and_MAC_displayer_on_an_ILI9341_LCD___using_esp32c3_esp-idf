@@ -5,6 +5,9 @@
 #include "freertos/FreeRTOS.h" //iram_attr
 #include "freertos/task.h"//xtaskcreate
 
+#define BTN_OK_PIN 47 
+#define BTN_NOK_PIN 14
+
 
 /*******************************************************
  *                global variables
@@ -24,7 +27,7 @@ void btns_init()
     const gpio_config_t btn_ok_gpio_cfg =
     {
         .mode = GPIO_MODE_INPUT,
-        .pin_bit_mask = 1ULL << 7,
+        .pin_bit_mask = 1ULL << BTN_OK_PIN,
         .pull_down_en = GPIO_PULLDOWN_ONLY,
         .intr_type = GPIO_INTR_POSEDGE,
     };
@@ -36,7 +39,7 @@ void btns_init()
     const gpio_config_t btn_nok_gpio_cfg =
     {
         .mode = GPIO_MODE_INPUT,
-        .pin_bit_mask = 1ULL << 0,
+        .pin_bit_mask = 1ULL << BTN_NOK_PIN,
         .pull_down_en = GPIO_PULLDOWN_ONLY,
         .intr_type = GPIO_INTR_POSEDGE,
     };
