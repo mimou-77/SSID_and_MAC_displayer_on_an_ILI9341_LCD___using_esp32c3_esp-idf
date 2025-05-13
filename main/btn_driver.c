@@ -23,7 +23,7 @@ void btns_init()
 
     gpio_install_isr_service(0);
 
-    gpio_reset_pin(7);
+    gpio_reset_pin(BTN_OK_PIN);
     const gpio_config_t btn_ok_gpio_cfg =
     {
         .mode = GPIO_MODE_INPUT,
