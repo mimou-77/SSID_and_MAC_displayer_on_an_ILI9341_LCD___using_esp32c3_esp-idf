@@ -14,6 +14,7 @@ named "ok_list", if "nok" button is pressed, the device mac is stored in a csv f
 - custom partition table
 - enabled fonts: montserrat 24 and montserrat 40
 
+# s3 only
 
 ## Later: 
 console cmd :

@@ -32,10 +32,10 @@ void btns_init()
         .intr_type = GPIO_INTR_POSEDGE,
     };
     gpio_config(&btn_ok_gpio_cfg);
-    gpio_intr_enable(7);
-    gpio_isr_handler_add(7, btn_ok_isr , NULL);
+    gpio_intr_enable(BTN_OK_PIN);
+    gpio_isr_handler_add(BTN_OK_PIN, btn_ok_isr , NULL);
 
-    gpio_reset_pin(0);
+    gpio_reset_pin(BTN_NOK_PIN);
     const gpio_config_t btn_nok_gpio_cfg =
     {
         .mode = GPIO_MODE_INPUT,
@@ -44,8 +44,8 @@ void btns_init()
         .intr_type = GPIO_INTR_POSEDGE,
     };
     gpio_config(&btn_nok_gpio_cfg);
-    gpio_intr_enable(0);
-    gpio_isr_handler_add(0, btn_nok_isr , NULL);
+    gpio_intr_enable(BTN_NOK_PIN);
+    gpio_isr_handler_add(BTN_NOK_PIN, btn_nok_isr , NULL);
 
     ESP_LOGI(TAG, "btn_pins config done");
 

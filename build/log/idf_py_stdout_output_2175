@@ -1,0 +1,82 @@
+[1/5] cd /home/mariem/AP_displayer/build/esp-idf/esptool_py && /home/mariem/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/mariem/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/mariem/AP_displayer/build/partition_table/partition-table.bin /home/mariem/AP_displayer/build/AP_displayer.bin
+AP_displayer.bin binary size 0x115660 bytes. Smallest app partition is 0x200000 bytes. 0xea9a0 bytes (46%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/mariem/AP_displayer/build/bootloader/esp-idf/esptool_py && /home/mariem/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/mariem/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/mariem/AP_displayer/build/bootloader/bootloader.bin
+Bootloader binary size 0x5220 bytes. 0x2de0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/mariem/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/mariem/esp-idf -D "SERIAL_TOOL=/home/mariem/.espressif/python_env/idf5.4_py3.12_env/bin/python;;/home/mariem/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/mariem/AP_displayer/build -P /home/mariem/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 AP_displayer.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:27:e2:14:40:f4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00125fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21024 bytes to 13383...
+Writing at 0x00000000... (100 %)
+Wrote 21024 bytes (13383 compressed) at 0x00000000 in 0.5 seconds (effective 333.3 kbit/s)...
+Hash of data verified.
+Compressed 1136224 bytes to 678948...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001ca24... (4 %)
+Writing at 0x00025f22... (7 %)
+Writing at 0x0002f658... (9 %)
+Writing at 0x0003ea16... (11 %)
+Writing at 0x00047ea8... (14 %)
+Writing at 0x00051914... (16 %)
+Writing at 0x00057a3f... (19 %)
+Writing at 0x0005df66... (21 %)
+Writing at 0x00063fe1... (23 %)
+Writing at 0x0006a012... (26 %)
+Writing at 0x0006fc25... (28 %)
+Writing at 0x00075e3f... (30 %)
+Writing at 0x0007c648... (33 %)
+Writing at 0x00082349... (35 %)
+Writing at 0x00088b94... (38 %)
+Writing at 0x0008f981... (40 %)
+Writing at 0x00095e17... (42 %)
+Writing at 0x0009beda... (45 %)
+Writing at 0x000a1edc... (47 %)
+Writing at 0x000a7b75... (50 %)
+Writing at 0x000ad331... (52 %)
+Writing at 0x000b21f4... (54 %)
+Writing at 0x000b7562... (57 %)
+Writing at 0x000bc8bc... (59 %)
+Writing at 0x000c1bcc... (61 %)
+Writing at 0x000c6d0d... (64 %)
+Writing at 0x000cc494... (66 %)
+Writing at 0x000d200a... (69 %)
+Writing at 0x000d7b99... (71 %)
+Writing at 0x000dd850... (73 %)
+Writing at 0x000e3261... (76 %)
+Writing at 0x000e8e15... (78 %)
+Writing at 0x000eeb7a... (80 %)
+Writing at 0x000f42fd... (83 %)
+Writing at 0x000fa59a... (85 %)
+Writing at 0x00104967... (88 %)
+Writing at 0x0010acf0... (90 %)
+Writing at 0x00110eae... (92 %)
+Writing at 0x00116ec1... (95 %)
+Writing at 0x0011d8ef... (97 %)
+Writing at 0x00122a33... (100 %)
+Wrote 1136224 bytes (678948 compressed) at 0x00010000 in 10.6 seconds (effective 857.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 118...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (118 compressed) at 0x00008000 in 0.1 seconds (effective 290.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
