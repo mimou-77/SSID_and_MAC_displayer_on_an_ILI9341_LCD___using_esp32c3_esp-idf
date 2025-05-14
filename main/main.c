@@ -22,9 +22,9 @@ volatile bool btn_ok_pressed = false;
 volatile bool btn_nok_pressed = false;
 
 
-void app_main(void)
+int app_main(void)
 {
-
+    char found = 0 ;
     esp_err_t err = ESP_OK;
     
     err = nvs_flash_init();
@@ -36,11 +36,20 @@ void app_main(void)
         err = nvs_flash_init();
     }
 
-    btns_init();
     
-    wifi_scan();
+    
+ 
+    if(!(wifi_scan())) //if no supla device found
+    {
+        ESP_LOGI(TAG, "no supla device found ; exiting");
+    }
+    else //if supla device found
+    {
+        found = 1; 
+    }
 
 
+    //check for debug purposes
     if (supla_device_ssid == NULL)
     {
         ESP_LOGI(TAG, "supla_device_ssid = NULL");
@@ -48,16 +57,22 @@ void app_main(void)
     }
     
 
-    for (int i = 0; i < 21; i++)
+    if(found)
     {
-        char_supla_device_ssid[i] = (char)(supla_device_ssid[i]);
-    }
+        for (int i = 0; i < 22; i++)
+        {
+            char_supla_device_ssid[i] = (char)(supla_device_ssid[i]);
+        }
     
+        //check for debug purposes
+        ESP_LOGI(TAG, "from main: uint8_t  ssid = %s", supla_device_ssid); //incorrect result (bad characters)
+        ESP_LOGI(TAG, "from main: char ssid = %s", char_supla_device_ssid);
+    }
 
-    ESP_LOGI(TAG, "from main: uint8_t  ssid = %s", supla_device_ssid); //incorrect result (bad characters)
-    ESP_LOGI(TAG, "from main: char ssid = %s", char_supla_device_ssid);
     
     display_init();
+
+    btns_init();
 
     init_spiffs();
 

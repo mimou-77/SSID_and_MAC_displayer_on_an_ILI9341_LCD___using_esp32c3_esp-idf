@@ -279,99 +279,106 @@ void display_init()
     lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003300), LV_PART_MAIN);
     lv_disp_set_rotation(lv_disp_get_default(), LV_DISP_ROTATION_90);
 
-    //label_ssid
-    lv_obj_t *label_ssid = lv_label_create(lv_screen_active());
+    //////////////////////////////////////////////////
+    //if supla device found (supla_device_ssid != NULL)
+    if (supla_device_ssid != NULL)
+    {
     
-    const char * s = char_supla_device_ssid;
-    lv_label_set_text(label_ssid, s);
-    lv_obj_set_style_text_color(label_ssid, lv_color_hex(0xffffff), LV_PART_MAIN);
-    lv_obj_align(label_ssid, LV_ALIGN_CENTER, 0, 80);
-    lv_obj_set_width(label_ssid, LCD_H_RES);
-    lv_obj_set_style_text_align(label_ssid, LV_TEXT_ALIGN_CENTER, 0);
-    
+        //label_ssid
+        lv_obj_t *label_ssid = lv_label_create(lv_screen_active());
 
-    //label_device_type__R2L_R2S_R1_R0
-    lv_obj_t * label_dt = lv_label_create(lv_screen_active());
+        const char * s = char_supla_device_ssid;
+        lv_label_set_text(label_ssid, s);
+        lv_obj_set_style_text_color(label_ssid, lv_color_hex(0xffffff), LV_PART_MAIN);
+        lv_obj_align(label_ssid, LV_ALIGN_CENTER, 0, 80);
+        lv_obj_set_width(label_ssid, LCD_H_RES);
+        lv_obj_set_style_text_align(label_ssid, LV_TEXT_ALIGN_CENTER, 0);
 
-    if (char_supla_device_ssid[7] == '0') //R0
-    {
-        const char  * dt = "R0";
-        lv_label_set_text(label_dt, dt);
-        lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
-        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -75);
-        lv_obj_set_width(label_dt, LCD_H_RES);
-        lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
-    }
-    else if (char_supla_device_ssid[7] == '1') //R1
-    {
-        const char  * dt = "R1";
-        lv_label_set_text(label_dt, dt);
-        lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
-        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -75);
-        lv_obj_set_width(label_dt, LCD_H_RES);
-        lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
-    }
-    else if (char_supla_device_ssid[7] == '2' && char_supla_device_ssid[8] == 'L') //R2L
-    {
-        const char  * dt = "R2L";
-        lv_label_set_text(label_dt, dt);
-        lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
-        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -75);
-        lv_obj_set_width(label_dt, LCD_H_RES);
-        lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
-    }
-    else if (char_supla_device_ssid[7] == '2' && char_supla_device_ssid[8] == 'S') //R2S
-    {
-        const char  * dt = "R2S";
-        lv_label_set_text(label_dt, dt);
-        lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
-        lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -75);
-        lv_obj_set_width(label_dt, LCD_H_RES);
-        lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
-    }
-    lv_obj_set_style_text_font(label_dt, &lv_font_montserrat_40, LV_PART_MAIN);
-
-
-    //label_mac
-    lv_obj_t * label_mac = lv_label_create(lv_screen_active());
-
-    char u_char_supla_device_mac[18]; //mac but uppercase
-    for (int i = 0; i < 18; i++)
-    {
-        if(((i % 3) == 2) && (i != 17) ) //if ':'
+        //label_device_type__R2L_R2S_R1_R0
+        lv_obj_t * label_dt = lv_label_create(lv_screen_active());      
+        if (char_supla_device_ssid[7] == '0') //R0
         {
-            u_char_supla_device_mac[i] = ':';
+            const char  * dt = "R0";
+            lv_label_set_text(label_dt, dt);
+            lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
+            lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -75);
+            lv_obj_set_width(label_dt, LCD_H_RES);
+            lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
         }
-        else
-        {   
-            if(!((supla_device_mac[i] >= '0') && (supla_device_mac[i] <= '9'))) //if not a number
+        else if (char_supla_device_ssid[7] == '1') //R1
+        {
+            const char  * dt = "R1";
+            lv_label_set_text(label_dt, dt);
+            lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
+            lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -75);
+            lv_obj_set_width(label_dt, LCD_H_RES);
+            lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
+        }
+        else if (char_supla_device_ssid[7] == '2' && char_supla_device_ssid[8] == 'L') //R2L
+        {
+            const char  * dt = "R2L";
+            lv_label_set_text(label_dt, dt);
+            lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
+            lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -75);
+            lv_obj_set_width(label_dt, LCD_H_RES);
+            lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
+        }
+        else if (char_supla_device_ssid[7] == '2' && char_supla_device_ssid[8] == 'S') //R2S
+        {
+            const char  * dt = "R2S";
+            lv_label_set_text(label_dt, dt);
+            lv_obj_set_style_text_color(label_dt, lv_color_hex(0xffffff), LV_PART_MAIN);
+            lv_obj_align(label_dt, LV_ALIGN_CENTER, 0, -75);
+            lv_obj_set_width(label_dt, LCD_H_RES);
+            lv_obj_set_style_text_align(label_dt, LV_TEXT_ALIGN_CENTER, 0);
+        }
+        lv_obj_set_style_text_font(label_dt, &lv_font_montserrat_40, LV_PART_MAIN);     
+        //label_mac
+        lv_obj_t * label_mac = lv_label_create(lv_screen_active());     
+        char u_char_supla_device_mac[18]; //mac but uppercase
+        for (int i = 0; i < 18; i++)
+        {
+            if(((i % 3) == 2) && (i != 17) ) //if ':'
             {
-                u_char_supla_device_mac[i] =  supla_device_mac[i] - 32;
-            }  
-            else //if number
-            {
-                u_char_supla_device_mac[i] =  supla_device_mac[i];
+                u_char_supla_device_mac[i] = ':';
+            }
+            else
+            {   
+                if(!((supla_device_mac[i] >= '0') && (supla_device_mac[i] <= '9'))) //if not a number
+                {
+                    u_char_supla_device_mac[i] =  supla_device_mac[i] - 32;
+                }  
+                else //if number
+                {
+                    u_char_supla_device_mac[i] =  supla_device_mac[i];
+                }
             }
         }
+        const char * m = u_char_supla_device_mac;
+        lv_label_set_text(label_mac, m);
+        lv_obj_set_style_text_color(label_mac, lv_color_hex(0xffffff), LV_PART_MAIN);
+        lv_obj_align(label_mac, LV_ALIGN_CENTER, 0, 0);
+        lv_obj_set_width(label_mac, LCD_H_RES);
+        lv_obj_set_style_text_align(label_mac, LV_TEXT_ALIGN_CENTER, 0);
+        lv_obj_set_style_text_font(label_mac, &lv_font_montserrat_24, LV_PART_MAIN);        
+        //label_ok_nok
+        label_ok_nok = lv_label_create(lv_screen_active());
+        lv_obj_add_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_align(label_ok_nok, LV_ALIGN_CENTER, -90, -75);
+        lv_obj_set_style_text_font(label_ok_nok, &lv_font_montserrat_40, LV_PART_MAIN);
+        lv_obj_set_style_text_color(label_ok_nok, lv_color_hex(0x7cff00), LV_PART_MAIN);
+
     }
-    const char * m = u_char_supla_device_mac;
-    lv_label_set_text(label_mac, m);
-    lv_obj_set_style_text_color(label_mac, lv_color_hex(0xffffff), LV_PART_MAIN);
-    lv_obj_align(label_mac, LV_ALIGN_CENTER, 0, 0);
-    lv_obj_set_width(label_mac, LCD_H_RES);
-    lv_obj_set_style_text_align(label_mac, LV_TEXT_ALIGN_CENTER, 0);
-    lv_obj_set_style_text_font(label_mac, &lv_font_montserrat_24, LV_PART_MAIN);
-
-
-
-    //label_ok_nok
-    label_ok_nok = lv_label_create(lv_screen_active());
-    lv_obj_add_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_align(label_ok_nok, LV_ALIGN_CENTER, -90, -75);
-    lv_obj_set_style_text_font(label_ok_nok, &lv_font_montserrat_40, LV_PART_MAIN);
-    lv_obj_set_style_text_color(label_ok_nok, lv_color_hex(0x7cff00), LV_PART_MAIN);
-
-
+    else //if no supla device found (supla_device_ssid = NULL)
+    {
+        lv_obj_t *label_no_supla_device_found = lv_label_create(lv_screen_active());
+        const char * s = "No SUPLA device found";
+        lv_label_set_text(label_no_supla_device_found, s);
+        lv_obj_set_style_text_color(label_no_supla_device_found, lv_color_hex(0xffffff), LV_PART_MAIN);
+        lv_obj_align(label_no_supla_device_found, LV_ALIGN_CENTER, 0, 80);
+        lv_obj_set_width(label_no_supla_device_found, LCD_H_RES);
+        lv_obj_set_style_text_align(label_no_supla_device_found, LV_TEXT_ALIGN_CENTER, 0);
+    }
 
     _lock_release(&lvgl_api_lock); //end ui
 }
@@ -379,23 +386,28 @@ void display_init()
 
 void update_label_ok_nok()
 {
-    _lock_acquire(&lvgl_api_lock);
-
-    if (btn_ok_pressed)
+    if (supla_device_ssid != NULL) //if supla device found
     {
-        ESP_LOGI(TAG, "btn_ok_pressed = %d",btn_ok_pressed );
-
-        lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
-        lv_label_set_text(label_ok_nok, LV_SYMBOL_OK "OK");
-    }
-    else if (btn_nok_pressed)
-    {   
-        lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
-        lv_obj_align(label_ok_nok, LV_ALIGN_CENTER, 90, -75);
-        lv_obj_set_style_text_color(label_ok_nok, lv_color_hex(0xff0909), LV_PART_MAIN);
-        lv_label_set_text(label_ok_nok, LV_SYMBOL_CLOSE "NOK");
-    }
     
+        _lock_acquire(&lvgl_api_lock);
 
-    _lock_release(&lvgl_api_lock);
+        if (btn_ok_pressed)
+        {
+            ESP_LOGI(TAG, "btn_ok_pressed = %d",btn_ok_pressed );
+
+            lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
+            lv_label_set_text(label_ok_nok, LV_SYMBOL_OK "OK");
+        }
+        else if (btn_nok_pressed)
+        {   
+            lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_align(label_ok_nok, LV_ALIGN_CENTER, 90, -75);
+            lv_obj_set_style_text_color(label_ok_nok, lv_color_hex(0xff0909), LV_PART_MAIN);
+            lv_label_set_text(label_ok_nok, LV_SYMBOL_CLOSE "NOK");
+        }
+
+        _lock_release(&lvgl_api_lock);
+    }
+    //if no SUPLA device found : do nothing
+    
 }

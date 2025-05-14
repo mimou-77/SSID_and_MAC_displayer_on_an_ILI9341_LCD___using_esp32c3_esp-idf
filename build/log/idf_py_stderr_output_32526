@@ -1,0 +1,125 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40056f68: memcpy in ROM
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+[0m
+[0;33m--- 0x40375d21: panic_abort at /home/mariem/esp-idf/components/esp_system/panic.c:454
+--- 0x4037dd09: esp_system_abort at /home/mariem/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x403868f5: abort at /home/mariem/esp-idf/components/newlib/abort.c:38
+--- 0x4200adfc: wifi_scan at /home/mariem/AP_displayer/main/scan_app.c:80
+--- 0x4200aae4: app_main at /home/mariem/AP_displayer/main/main.c:41
+--- 0x420be87b: main_task at /home/mariem/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037e7a1: vPortTaskWrapper at /home/mariem/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375c60: esp_restart_noos at /home/mariem/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

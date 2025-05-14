@@ -21,7 +21,7 @@ static const char *TAG = "scan_app";
  * @brief scans wifi and returns a structure containing the supla device ssid and mac
  * @return 
  */
-void wifi_scan()
+char wifi_scan()
 {
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
@@ -45,6 +45,8 @@ void wifi_scan()
     ESP_ERROR_CHECK(esp_wifi_scan_get_ap_num(&ap_count)); //nbr of scanned APs we found
     esp_wifi_scan_get_ap_records(&aps_nbr, ap_info); //get aps_nbr scanned APs and store them in the array ap_info 
     ESP_LOGI(TAG, "total APs scanned = %u, size of APs list shown = %u", ap_count, aps_nbr);
+
+    char device_found = 0; 
 
     for (int i = 0; i < aps_nbr; i++)
     {
@@ -73,8 +75,12 @@ void wifi_scan()
 
             ESP_LOGI(TAG, "SUPLA device found : SSID = %s", supla_device_ssid);
             ESP_LOGI(TAG, "                     MAC = %s", supla_device_mac);
+
+            device_found = 1;
         }
         
     }
+
+    return device_found;
 
 }

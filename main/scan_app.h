@@ -24,7 +24,7 @@ extern char char_supla_device_ssid[21];
 /*******************************************************
  *                functions headers
  *******************************************************/
-void wifi_scan();
+char wifi_scan();
 
 
 
