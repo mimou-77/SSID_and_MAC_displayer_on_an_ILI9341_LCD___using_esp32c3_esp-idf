@@ -1,0 +1,123 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c1e2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May  9 2025 13:21:31[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (78) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=399e4h (236004) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=00049a0c vaddr=3fc9bd00 size=04b88h ( 19336) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=0004e59c vaddr=40374000 size=01a7ch (  6780) load[0m
+[0;32mI (143) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=bf5a0h (783776) map[0m
+[0;32mI (286) esp_image: segment 4: paddr=0010f5c8 vaddr=40375a7c size=161b0h ( 90544) load[0m
+[0;32mI (306) esp_image: segment 5: paddr=00125780 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (315) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (316) boot: Disabling RNG early entropy source...[0m
+[0;32mI (326) cpu_start: Multicore app[0m
+[0;32mI (336) cpu_start: Pro cpu start user code[0m
+[0;32mI (336) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (336) app_init: Application information:[0m
+[0;32mI (336) app_init: Project name:     AP_displayer[0m
+[0;32mI (340) app_init: App version:      7cb18dd-dirty[0m
+[0;32mI (345) app_init: Compile time:     May 16 2025 15:40:45[0m
+[0;32mI (350) app_init: ELF file SHA256:  256b6a2e2...[0m
+[0;32mI (354) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (358) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (362) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (366) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (370) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (376) heap_init: At 3FCB4758 len 00034FB8 (211 KiB): RAM[0m
+[0;32mI (381) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (386) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (391) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (398) spi_flash: detected chip: generic[0m
+[0;32mI (400) spi_flash: flash io: dio[0m
+[0;32mI (404) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (410) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (417) main_task: Started on CPU0[0m
+[0;32mI (427) main_task: Calling app_main()[0m
+[0;32mI (437) pp: pp rom version: e7ae62f[0m
+[0;32mI (437) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (447) wifi:wifi driver task: 3fcbe4c0, prio:23, stack:6656, core=0[0m
+[0;32mI (447) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (447) wifi:wifi certification version: v7.0[0m
+[0;32mI (447) wifi:config NVS flash: enabled[0m
+[0;32mI (457) wifi:config nano formatting: disabled[0m
+[0;32mI (457) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (457) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (467) wifi:Init management short buffer num: 32[0m
+[0;32mI (467) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (477) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (477) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (487) wifi:Init static rx buffer num: 10[0m
+[0;32mI (487) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (487) wifi_init: rx ba win: 6[0m
+[0;32mI (497) wifi_init: accept mbox: 6[0m
+[0;32mI (497) wifi_init: tcpip mbox: 32[0m
+[0;32mI (497) wifi_init: udp mbox: 6[0m
+[0;32mI (497) wifi_init: tcp mbox: 6[0m
+[0;32mI (507) wifi_init: tcp tx win: 5760[0m
+[0;32mI (507) wifi_init: tcp rx win: 5760[0m
+[0;32mI (507) wifi_init: tcp mss: 1440[0m
+[0;32mI (517) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (517) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (527) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (557) wifi:mode : sta (48:27:e2:14:40:f4)[0m
+[0;32mI (567) wifi:enable tsf[0m
+[0;32mI (3067) scan_app: total APs scanned = 16, size of APs list shown = 10[0m
+[0;32mI (3067) scan_app: SUPLA device found : SSID = SOMEF-R2L-24EC4A9BD5EC[0m
+[0;32mI (3067) scan_app:                      MAC = 24:ec:4a:9b:d5:ed[0m
+[0;32mI (3067) main: from main: uint8_t  ssid = SOMEF-R2L-24EC4A9BD5EC[0m
+[0;32mI (3077) main: from main: char ssid = SOMEF-R2L-24EC4A9BD5EC[0m
+[0;32mI (3077) display_driver: config bl pin[0m
+[0;32mI (3087) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3097) display_driver: init spi bus[0m
+[0;32mI (3097) display_driver: init lcd panel io[0m
+[0;32mI (3097) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3107) display_driver: init ili9341 driver[0m
+[0;32mI (3117) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3117) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (3247) display_driver: init lvgl[0m
+[0;32mI (3247) display_driver: init lv tick_timer[0m
+[0;32mI (3247) display_driver: attach callback to lv_display event: "display is flush ready" ie: transfer from lv buffers is finished; cb = notify lvgl[0m
+[0;32mI (3257) display_driver: create lvgl task[0m
+[0;32mI (3257) display_driver: starting lvgl task[0m
+[0;32mI (3327) display_driver: start ui [0m
+[0;32mI (3417) gpio: GPIO[47]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (3417) gpio: GPIO[47]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (3417) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (3427) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:1 [0m
+[0;32mI (3437) btn_driver: btn_pins config done[0m
+[0;32mI (3527) lists_lib: ok_list.csv : [0m
+[0;32mI (3527) lists_lib:                  24:ec:4a:9b:d5:ed[0m
+
+[0;32mI (3527) lists_lib: nok_list.csv : [0m
+[0;32mI (3527) lists_lib:                   24:ec:4a:9b:d5:ed[0m
+
+[0;32mI (3537) lists_lib: partition size: total = 956561, used = 1004[0m
+[0;32mI (8027) display_driver: btn_ok_pressed = 1[0m
+[0;32mI (8027) lists_lib: device already in ok_list.csv[0m
+[0;32mI (8027) lists_lib: device already in nok_list.csv[0m
+[0;32mI (8037) btn_driver: btn_ok pressed[0m
+[0;32mI (8037) lists_lib: device already in nok_list.csv[0m
+[0;32mI (8047) btn_driver: btn_nok pressed[0m

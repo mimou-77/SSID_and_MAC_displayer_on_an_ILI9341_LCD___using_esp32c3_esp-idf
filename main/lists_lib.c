@@ -3,6 +3,7 @@
 #include "esp_spiffs.h"
 #include "scan_app.h"
 #include "esp_log.h"
+#include "string.h"
 
 static const char *TAG = "lists_lib";
 
@@ -28,6 +29,16 @@ void init_spiffs()
     // fclose(nok_file_d);
     // ESP_LOGI(TAG, "file content of nok_lists.csv deleted");
     
+
+    //check if ok_list.csv and nok_list.csv exist, if not, create them
+    FILE * ok_file_c = fopen("/spiffs/ok_list.csv", "a+");
+    fclose(ok_file_c);
+    
+    FILE * nok_file_c = fopen("/spiffs/nok_list.csv", "a+");
+    fclose(nok_file_c);
+    
+    
+
     //show content of ok_list.csv and nok_list.csv
     FILE * ok_file_l = fopen("/spiffs/ok_list.csv", "r");
         if (ok_file_l == NULL)
@@ -36,9 +47,10 @@ void init_spiffs()
             return;
         }
     char line_ok[256]; //1 line of the file = 256 characters (max length)
+    ESP_LOGI(TAG, "ok_list.csv : ");
     while(fgets(line_ok, sizeof(line_ok), ok_file_l) != NULL)
     {
-        ESP_LOGI(TAG, "csv line of ok_list.csv : %s", line_ok);
+        ESP_LOGI(TAG, "                 %s", line_ok);
     }
     fclose(ok_file_l);
     FILE * nok_file_l = fopen("/spiffs/nok_list.csv", "r");
@@ -48,9 +60,10 @@ void init_spiffs()
         return;
     }
     char line_nok[256]; //1 line of the file = 256 characters (max length)
+    ESP_LOGI(TAG, "nok_list.csv : ");
     while(fgets(line_nok, sizeof(line_nok), nok_file_l) != NULL)
     {
-        ESP_LOGI(TAG, "csv line of ok_list.csv : %s", line_nok);
+        ESP_LOGI(TAG, "                  %s", line_nok);
     }
     fclose(nok_file_l);
         
@@ -70,61 +83,102 @@ void update_lists()
 {
     if(btn_ok_pressed) //add device mac to ok_list
     {
-        FILE * ok_file = fopen("/spiffs/ok_list.csv", "a"); //mode append
-        if (ok_file == NULL)
-        {
-            ESP_LOGI(TAG, "failed to create ok_list.csv");
-            return;
-        } 
 
-        fprintf(ok_file, "%s\n", supla_device_mac);
-        fclose(ok_file);
-
-        //log file content (file = ok_list.csv)
-        FILE * ok_file_l = fopen("/spiffs/ok_list.csv", "r");
-        if (ok_file_l == NULL)
+        // before adding the device mac to ok_list, check if it's already there
+        char device_in_ok_list = 0; 
+        char line[64]; //buffer where to store the line read from the file
+        FILE * ok_file_c = fopen("/spiffs/ok_list.csv", "r");
+        while (fgets(line, 64, ok_file_c) != NULL) //fgets reads a new line, returns next line, return NULL if we reached EOF
         {
-            ESP_LOGI(TAG, "failed to open file: %s", "ok_file_l");
-            return;
+            if (strstr(line, supla_device_mac) != NULL) //we found device mac in a line of the csv file
+            {
+                device_in_ok_list = 1 ;
+                ESP_LOGI(TAG, "device already in ok_list.csv"); 
+            }
+            
+        }
+        fclose(ok_file_c);
+        
+        if (!device_in_ok_list) //write device mac in ok_list.csv
+        {
+            FILE * ok_file = fopen("/spiffs/ok_list.csv", "a"); //mode append
+            if (ok_file == NULL)
+            {
+                ESP_LOGI(TAG, "failed to create ok_list.csv");
+                return;
+            } 
+        
+            fprintf(ok_file, "%s\n", supla_device_mac);
+            fclose(ok_file);
         }
         
-        char line[256]; //1 line of the file = 256 characters (max length)
-        int i = 0;
-        while(fgets(line, sizeof(line), ok_file_l) != NULL)
-        {
-            ESP_LOGI(TAG, "ok_list.csv line %d: %s", i, line);
-            i++;
-        }
-        fclose(ok_file_l);
+
+            
+        // //log file content (file = ok_list.csv) when ok_btn pressed (whether device mac added or not) 
+        // FILE * ok_file_l = fopen("/spiffs/ok_list.csv", "r");
+        // if (ok_file_l == NULL)
+        // {
+        //     ESP_LOGI(TAG, "failed to open file: %s", "ok_file_l");
+        //     return;
+        // }
+        
+        // char line_log[256]; //1 line of the file = 256 characters (max length)
+        // int i = 0;
+        // while(fgets(line_log, sizeof(line_log), ok_file_l) != NULL)
+        // {
+        //     ESP_LOGI(TAG, "ok_list.csv line %d: %s", i, line_log);
+        //     i++;
+        // }
+        // fclose(ok_file_l);
     }
 
-    if(btn_nok_pressed) //add device mac to ok_list
+    if(btn_nok_pressed) //add device mac to nok_list
     {
-        FILE * nok_file = fopen("/spiffs/nok_list.csv", "a"); //mode append
-        if (nok_file == NULL)
+        //check if device mac is already in nok_list.csv
+        char device_in_nok_list = 0; 
+        char line[64]; //buffer where to store the line read from the file
+        FILE * nok_file_c = fopen("/spiffs/nok_list.csv", "r");
+        while (fgets(line, 64, nok_file_c) != NULL) //fgets reads a new line, returns next line, return NULL if we reached EOF
         {
-            ESP_LOGI(TAG, "failed to create nok_list.csv");
-            return;
-        } 
+            if (strstr(line, supla_device_mac) != NULL) //we found device mac in a line of the csv file
+            {
+                device_in_nok_list = 1 ;
+                ESP_LOGI(TAG, "device already in nok_list.csv"); 
+            }
+            
+        }
+        fclose(nok_file_c);
 
-        fprintf(nok_file, "%s\n", supla_device_mac);
-        fclose(nok_file);
-
-        //log file content (file = nok_list.csv)
-        FILE * nok_file_l = fopen("/spiffs/nok_list.csv", "r");
-        if (nok_file_l == NULL)
+        if (!device_in_nok_list) //if device mac isn't in the nok_list, add it to nok_list
         {
-            ESP_LOGI(TAG, "failed to open file: %s", "nok_file_l");
-            return;
+            FILE * nok_file = fopen("/spiffs/nok_list.csv", "a"); //mode append
+            if (nok_file == NULL)
+            {
+                ESP_LOGI(TAG, "failed to create nok_list.csv");
+                return;
+            } 
+
+            fprintf(nok_file, "%s\n", supla_device_mac);
+            fclose(nok_file);
         }
         
-        char line[256]; //1 line of the file = 256 characters (max length)
-        int i = 0;
-        while(fgets(line, sizeof(line), nok_file_l) != NULL)
-        {
-            ESP_LOGI(TAG, "nok_list.csv line %d: %s", i, line);
-            i++;
-        }
-        fclose(nok_file_l);
+
+
+        // //log file content (file = nok_list.csv) when nok_btn pressed (whether device mac added or not) 
+        // FILE * nok_file_l = fopen("/spiffs/nok_list.csv", "r");
+        // if (nok_file_l == NULL)
+        // {
+        //     ESP_LOGI(TAG, "failed to open file: %s", "nok_file_l");
+        //     return;
+        // }
+        
+        // char line_log[256]; //1 line of the file = 256 characters (max length)
+        // int i = 0;
+        // while(fgets(line_log, sizeof(line_log), nok_file_l) != NULL)
+        // {
+        //     ESP_LOGI(TAG, "nok_list.csv line %d: %s", i, line_log);
+        //     i++;
+        // }
+        // fclose(nok_file_l);
     }
 }
