@@ -89,33 +89,57 @@ void update_lists()
     if(btn_ok_pressed) //add device mac to ok_list
     {
 
-        // before adding the device mac to ok_list, check if it's already there
-        char device_in_ok_list = 0; 
+        
+        char device_in_ok_list = 0;
+        char device_in_nok_list = 0;  
         char line[64]; //buffer where to store the line read from the file
         FILE * ok_file_c = fopen("/spiffs/ok_list.csv", "r");
+        FILE * nok_file_c = fopen("/spiffs/nok_list.csv", "r");
+        
+        // before adding the device mac to ok_list, check if it's already there
         while (fgets(line, 64, ok_file_c) != NULL) //fgets reads a new line, returns next line, return NULL if we reached EOF
         {
-            if (strstr(line, supla_device_mac) != NULL) //we found device mac in a line of the csv file
+            if (strstr(line, supla_device_mac) != NULL) //we found device mac in a line of the ok csv file
             {
                 device_in_ok_list = 1 ;
                 ESP_LOGI(TAG, "device already in ok_list.csv"); 
             }
             
         }
-        fclose(ok_file_c);
         
-        if (!device_in_ok_list) //write device mac in ok_list.csv
+
+        //if device isn't in ok_list, check if it is in nok_list
+        if (!device_in_ok_list)
+        {
+         
+            while (fgets(line, 64, nok_file_c) != NULL) //fgets reads a new line, returns next line, return NULL if we reached EOF
+            {
+                if (strstr(line, supla_device_mac) != NULL) //we found device mac in a line of the nok csv file
+                {
+                    device_in_nok_list = 1 ;
+                    ESP_LOGI(TAG, "device is already in nok_list ; device cannot be ok and nok at the same time"); 
+                }
+
+            }
+        
+        }
+
+        
+        if (!device_in_ok_list && !device_in_nok_list) //write device mac in ok_list.csv
         {   
             FILE * ok_file = fopen("/spiffs/ok_list.csv", "a"); //mode append
             if (ok_file == NULL)
             {
-                ESP_LOGI(TAG, "failed to create ok_list.csv");
+                ESP_LOGI(TAG, "failed to open ok_list.csv");
                 return;
             } 
         
             fprintf(ok_file, "%s\n", supla_device_mac);
             fclose(ok_file);
         }
+
+        fclose(ok_file_c);
+        fclose(nok_file_c);
         
 
             
@@ -139,51 +163,57 @@ void update_lists()
 
     if(btn_nok_pressed) //add device mac to nok_list
     {
-        //check if device mac is already in nok_list.csv
-        char device_in_nok_list = 0; 
+        
+        char device_in_ok_list = 0;
+        char device_in_nok_list = 0;  
         char line[64]; //buffer where to store the line read from the file
+        FILE * ok_file_c = fopen("/spiffs/ok_list.csv", "r");
         FILE * nok_file_c = fopen("/spiffs/nok_list.csv", "r");
+        
+        // before adding the device mac to nok_list, check if it's already there
         while (fgets(line, 64, nok_file_c) != NULL) //fgets reads a new line, returns next line, return NULL if we reached EOF
         {
-            if (strstr(line, supla_device_mac) != NULL) //we found device mac in a line of the csv file
+            if (strstr(line, supla_device_mac) != NULL) //we found device mac in a line of the ok csv file
             {
                 device_in_nok_list = 1 ;
                 ESP_LOGI(TAG, "device already in nok_list.csv"); 
             }
             
         }
-        fclose(nok_file_c);
 
-        if (!device_in_nok_list) //if device mac isn't in the nok_list, add it to nok_list
+
+        //if device isn't in nok_list, check if it is in ok_list
+        if (!device_in_nok_list)
         {
+         
+            while (fgets(line, 64, ok_file_c) != NULL) //fgets reads a new line, returns next line, return NULL if we reached EOF
+            {
+                if (strstr(line, supla_device_mac) != NULL) //we found device mac in a line of the ok csv file
+                {
+                    device_in_ok_list = 1 ;
+                    ESP_LOGI(TAG, "device is already in ok_list ; device cannot be ok and nok at the same time"); 
+                }
+
+            }
+        
+        }
+
+        
+        if (!device_in_ok_list && !device_in_nok_list) //write device mac in nok_list.csv
+        {   
             FILE * nok_file = fopen("/spiffs/nok_list.csv", "a"); //mode append
             if (nok_file == NULL)
             {
-                ESP_LOGI(TAG, "failed to create nok_list.csv");
+                ESP_LOGI(TAG, "failed to open nok_list.csv");
                 return;
             } 
-
+        
             fprintf(nok_file, "%s\n", supla_device_mac);
             fclose(nok_file);
         }
-        
 
+        fclose(ok_file_c);
+        fclose(nok_file_c);
 
-        // //log file content (file = nok_list.csv) when nok_btn pressed (whether device mac added or not) 
-        // FILE * nok_file_l = fopen("/spiffs/nok_list.csv", "r");
-        // if (nok_file_l == NULL)
-        // {
-        //     ESP_LOGI(TAG, "failed to open file: %s", "nok_file_l");
-        //     return;
-        // }
-        
-        // char line_log[256]; //1 line of the file = 256 characters (max length)
-        // int i = 0;
-        // while(fgets(line_log, sizeof(line_log), nok_file_l) != NULL)
-        // {
-        //     ESP_LOGI(TAG, "nok_list.csv line %d: %s", i, line_log);
-        //     i++;
-        // }
-        // fclose(nok_file_l);
     }
 }
