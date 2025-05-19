@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "AP_displayer",
-    "project_version":    "7cb18dd-dirty",
+    "project_version":    "3e2cfd4-dirty",
     "project_path":       "/home/mariem/AP_displayer",
     "idf_path":           "/home/mariem/esp-idf",
     "build_dir":          "/home/mariem/AP_displayer/build",

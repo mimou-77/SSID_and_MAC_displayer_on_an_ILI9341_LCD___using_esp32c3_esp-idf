@@ -37,7 +37,7 @@ void init_spiffs()
     FILE * nok_file_c = fopen("/spiffs/nok_list.csv", "a+");
     fclose(nok_file_c);
     
-    
+
 
     //show content of ok_list.csv and nok_list.csv
     FILE * ok_file_l = fopen("/spiffs/ok_list.csv", "r");
@@ -50,7 +50,7 @@ void init_spiffs()
     ESP_LOGI(TAG, "ok_list.csv : ");
     while(fgets(line_ok, sizeof(line_ok), ok_file_l) != NULL)
     {
-        ESP_LOGI(TAG, "                 %s", line_ok);
+        ESP_LOGI("", "          %s", line_ok);
     }
     fclose(ok_file_l);
     FILE * nok_file_l = fopen("/spiffs/nok_list.csv", "r");
@@ -63,7 +63,7 @@ void init_spiffs()
     ESP_LOGI(TAG, "nok_list.csv : ");
     while(fgets(line_nok, sizeof(line_nok), nok_file_l) != NULL)
     {
-        ESP_LOGI(TAG, "                  %s", line_nok);
+        ESP_LOGI("","          %s", line_nok);
     }
     fclose(nok_file_l);
         
@@ -100,7 +100,7 @@ void update_lists()
         fclose(ok_file_c);
         
         if (!device_in_ok_list) //write device mac in ok_list.csv
-        {
+        {   
             FILE * ok_file = fopen("/spiffs/ok_list.csv", "a"); //mode append
             if (ok_file == NULL)
             {
