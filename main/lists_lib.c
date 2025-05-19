@@ -36,7 +36,12 @@ void init_spiffs()
     
     FILE * nok_file_c = fopen("/spiffs/nok_list.csv", "a+");
     fclose(nok_file_c);
-    
+
+    //temporary: delete contents of  ok_lists.csv and nok_lists.csv
+    ok_file_c = fopen("/spiffs/ok_list.csv","w");
+    fclose(ok_file_c);
+    nok_file_c = fopen("/spiffs/nok_list.csv", "w");
+    fclose(nok_file_c);
 
 
     //show content of ok_list.csv and nok_list.csv
