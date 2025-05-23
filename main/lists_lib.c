@@ -115,7 +115,7 @@ void auto_classify_ok_nok()
     for (int i = 0; i < strlen(mac_an); i++)
     {
         if(!((mac_an[i] >= '0') && (mac_an[i] <= '9'))) //if not a number (if letter)
-                {
+                {   
                     mac_an_u[i] =  mac_an[i] - 32;
                 }  
                 else //if number
@@ -143,16 +143,28 @@ void auto_classify_ok_nok()
         char mac_u[18];
         for (int i = 0; i < strlen(supla_device_mac); i++)
         {
-            if(!((supla_device_mac[i] >= '0') && (supla_device_mac[i] <= '9'))) //if not a number (if letter)
+            if(!((supla_device_mac[i] >= '0') && (supla_device_mac[i] <= '9'))) //if not a number (if letter or ':')
                     {
-                        mac_u[i] =  supla_device_mac[i] - 32;
+                        if (supla_device_mac[i] == ':') //if ':'
+                        {
+                            mac_u[i] =  supla_device_mac[i];
+                        }
+                        else //if letter
+                        {
+                            mac_u[i] =  supla_device_mac[i] - 32; 
+                        }
+                        
                     }  
-                    else //if not a letter => nbr or ':'
-                    {
-                        mac_u[i] =  supla_device_mac[i];
-                    }
+            else //if number
+                {
+                    mac_u[i] =  supla_device_mac[i];
+                }
         }
         mac_u[17] = '\0';
+
+        // //check
+        // ESP_LOGI(TAG, "mac_u = %s\n", mac_u);
+        
 
         //compare ssid_10_20 with mac_an_u_0_10 && (ssid[21]+1) with mac_an_u[11]
         if ((strcmp(ssid_10_20, mac_an_u_0_10) == 0) && (mac_an_u[11] == (char_supla_device_ssid[21]+1))) //= => correct OK
@@ -185,14 +197,21 @@ void auto_classify_ok_nok()
         char mac_u[18];
         for (int i = 0; i < strlen(supla_device_mac); i++)
         {
-            if(!((supla_device_mac[i] >= '0') && (supla_device_mac[i] <= '9'))) //if not a number (if letter)
+            if(!((supla_device_mac[i] >= '0') && (supla_device_mac[i] <= '9'))) //if not a number (if letter or ':')
                     {
-                        mac_u[i] =  supla_device_mac[i] - 32;
+                        if (supla_device_mac[i] == ':') //':'
+                        {
+                            mac_u[i] =  supla_device_mac[i];
+                        }
+                        else //letter
+                        {
+                            mac_u[i] =  supla_device_mac[i] - 32; 
+                        }
                     }  
-                    else //if not a letter => nbr or ':'
-                    {
+            else //if number
+                {
                         mac_u[i] =  supla_device_mac[i];
-                    }
+                }
         }
         mac_u[17] = '\0';
 
@@ -228,7 +247,8 @@ void add_to_ok_list(char * _mac_u) //_mac_u ends with '\0' naturally => no probl
             if (strstr(line, _mac_u) != NULL) //we found device mac in a line of the ok csv file
             {
                 device_in_ok_list = 1 ;
-                ESP_LOGI(TAG, "device already in ok_list.csv"); 
+                ESP_LOGI(TAG, "device already in ok_list.csv");
+                device_ok = 1; 
             }
             
         }
@@ -268,7 +288,8 @@ void add_to_nok_list(char * _mac_u) //_mac_u ends with '\0' naturally => no prob
             if (strstr(line, _mac_u) != NULL) //we found device mac in a line of the ok csv file
             {
                 device_in_nok_list = 1 ;
-                ESP_LOGI(TAG, "device already in nok_list.csv"); 
+                ESP_LOGI(TAG, "device already in nok_list.csv");
+                device_nok = 1;  
             }
    
         }

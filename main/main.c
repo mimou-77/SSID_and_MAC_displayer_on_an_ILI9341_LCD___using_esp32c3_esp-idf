@@ -76,11 +76,11 @@ int app_main(void)
 
     init_spiffs(); //init spiffs + call auto_classify
  
+    update_label_ok_nok();
 
-    // à modifier pour pas while(1); update label of ui only once 
+
     while(1)
-    {   update_label_ok_nok();
-        
+    {       
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 
