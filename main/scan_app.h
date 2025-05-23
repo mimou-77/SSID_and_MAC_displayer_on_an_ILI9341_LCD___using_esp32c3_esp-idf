@@ -17,7 +17,7 @@ typedef struct
 } supla_ssid_mac_t;
 
 extern uint8_t * supla_device_ssid ;
-extern char supla_device_mac[18] ;
+extern char supla_device_mac[18] ; //will be lowercase ; defined in main.c, modified by scan_app.c
 extern char char_supla_device_ssid[21];
 
 

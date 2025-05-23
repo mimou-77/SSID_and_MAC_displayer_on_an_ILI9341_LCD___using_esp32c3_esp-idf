@@ -74,7 +74,7 @@ char wifi_scan()
             }
 
             ESP_LOGI(TAG, "SUPLA device found : SSID = %s", supla_device_ssid);
-            ESP_LOGI(TAG, "                     MAC = %s", supla_device_mac);
+            ESP_LOGI(TAG, "                     MAC = %s", supla_device_mac); //lowercase
 
             device_found = 1;
         }

@@ -14,12 +14,14 @@
 static const char * TAG = "main";
 
 uint8_t * supla_device_ssid = NULL ;
-char supla_device_mac[18] = {0} ;
-char char_supla_device_ssid[21] = {0} ;
+char supla_device_mac[18] = {0} ; //scan_app.c modifies it
+char char_supla_device_ssid[23] = {0} ;
 
 
-volatile bool btn_ok_pressed = false;
-volatile bool btn_nok_pressed = false;
+// volatile bool btn_ok_pressed = false;
+// volatile bool btn_nok_pressed = false;
+volatile bool device_ok = false;
+volatile bool device_nok = false;
 
 
 int app_main(void)
@@ -59,7 +61,7 @@ int app_main(void)
 
     if(found)
     {
-        for (int i = 0; i < 22; i++)
+        for (int i = 0; i < 23; i++)
         {
             char_supla_device_ssid[i] = (char)(supla_device_ssid[i]);
         }
@@ -72,9 +74,13 @@ int app_main(void)
     
     display_init();
 
-    btns_init();
+    //uses buttons to classify device as ok or nok ↓
+    //btns_init();
 
     init_spiffs();
+
+    //automatically classifies device as ok or nok ↓
+    auto_classify_ok_nok();
 
     //connect to ssid/pw for the csv files transfer
     
@@ -82,7 +88,10 @@ int app_main(void)
 
     while(1)
     {   update_label_ok_nok();
-        update_lists();
+        
+        //uses buttons to classify device as ok or nok ↓
+        //update_lists();
+
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 
