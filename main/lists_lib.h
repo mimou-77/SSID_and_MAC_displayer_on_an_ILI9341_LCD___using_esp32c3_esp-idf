@@ -8,8 +8,8 @@
 /*-----------------------------------------------------------------------------------------------*/
 /* extern variables                                                                              */
 /*-----------------------------------------------------------------------------------------------*/
-volatile extern bool device_ok;
-volatile extern bool device_nok;
+volatile extern char device_ok;
+volatile extern char device_nok;
 
 
 
@@ -18,11 +18,6 @@ volatile extern bool device_nok;
 /*-----------------------------------------------------------------------------------------------*/
 void init_spiffs();
 
-
-/**
- * @brief if ok_pressed => add device mac to ok_list ; same for nok_list
- */
-void update_lists();
 
 /**
  * @brief automatically classifies device as ok or nok ↓

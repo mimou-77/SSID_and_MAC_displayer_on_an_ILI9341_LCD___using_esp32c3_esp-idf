@@ -5,7 +5,7 @@
 
 #include "scan_app.h"
 #include "display_driver.h"
-#include "btn_driver.h"
+#include "lists_lib.h"
 
 #include <stdio.h>
 #include <stdbool.h>

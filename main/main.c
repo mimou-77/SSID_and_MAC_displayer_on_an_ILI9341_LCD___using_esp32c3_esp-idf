@@ -1,6 +1,5 @@
 #include "scan_app.h"
 #include "lists_lib.h"
-#include "btn_driver.h"
 #include "display_driver.h"
 #include "lists_lib.h"
 
@@ -15,17 +14,18 @@ static const char * TAG = "main";
 
 uint8_t * supla_device_ssid = NULL ;
 char supla_device_mac[18] = {0} ; //scan_app.c modifies it
-char char_supla_device_ssid[23] = {0} ;
+char char_supla_device_ssid[21] = {0} ;
 
 
-// volatile bool btn_ok_pressed = false;
-// volatile bool btn_nok_pressed = false;
-volatile bool device_ok = false;
-volatile bool device_nok = false;
+//declared extern in lists_lib.h ; modified by auto_classify_ok_nok ; used by display_driver.c/update_label_ok_nok
+volatile char device_ok = 0;
+volatile char device_nok = 0;
 
 
 int app_main(void)
 {
+    supla_device_mac[17] = '\0' ; //to avoid conflicts when supla_device_mac used as char *
+
     char found = 0 ;
     esp_err_t err = ESP_OK;
     
@@ -74,24 +74,13 @@ int app_main(void)
     
     display_init();
 
-    //uses buttons to classify device as ok or nok ↓
-    //btns_init();
+    init_spiffs(); //init spiffs + call auto_classify
+ 
 
-    init_spiffs();
-
-    //automatically classifies device as ok or nok ↓
-    auto_classify_ok_nok();
-
-    //connect to ssid/pw for the csv files transfer
-    
-
-
+    // à modifier pour pas while(1); update label of ui only once 
     while(1)
     {   update_label_ok_nok();
         
-        //uses buttons to classify device as ok or nok ↓
-        //update_lists();
-
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 

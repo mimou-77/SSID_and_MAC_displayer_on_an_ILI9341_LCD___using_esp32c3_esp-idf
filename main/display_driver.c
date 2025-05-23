@@ -1,6 +1,6 @@
 #include "display_driver.h"
 #include "scan_app.h"
-#include "btn_driver.h"
+#include "lists_lib.h"
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -391,14 +391,13 @@ void update_label_ok_nok()
     
         _lock_acquire(&lvgl_api_lock);
 
-        if (btn_ok_pressed)
+        if (device_ok)
         {
-            ESP_LOGI(TAG, "btn_ok_pressed = %d",btn_ok_pressed );
 
             lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
             lv_label_set_text(label_ok_nok, LV_SYMBOL_OK "OK");
         }
-        else if (btn_nok_pressed)
+        else if (device_nok)
         {   
             lv_obj_clear_flag(label_ok_nok, LV_OBJ_FLAG_HIDDEN);
             lv_obj_align(label_ok_nok, LV_ALIGN_CENTER, 90, -75);
