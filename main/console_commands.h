@@ -20,7 +20,9 @@
 
 void init_console();
 
+static void register_restart();
 
+static int restart(int argc, char ** argv);
 
 
 
