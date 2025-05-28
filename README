@@ -13,11 +13,13 @@ named "ok_list", if "nok" button is pressed, the device mac is stored in a csv f
 - flash size 4 MB
 - custom partition table
 - enabled fonts: montserrat 24 and montserrat 40
+- enable CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG
+- CONFIG_CONSOLE_MAX_COMMAND_LINE_LENGTH
 
 # s3 only
 
 ## Later: 
 console cmd :
-- delete mac from ok_list or nok_list
+//no - delete mac from ok_list or nok_list
 - display ok_list or nok_list
 

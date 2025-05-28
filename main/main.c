@@ -2,6 +2,7 @@
 #include "lists_lib.h"
 #include "display_driver.h"
 #include "lists_lib.h"
+#include "console_commands.h"
 
 #include "esp_wifi.h"
 #include "esp_log.h"
@@ -77,6 +78,8 @@ int app_main(void)
     init_spiffs(); //init spiffs + call auto_classify
  
     update_label_ok_nok();
+
+    init_console();
 
 
     while(1)

@@ -1,0 +1,12 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Using component placed at /home/mariem/esp-idf/examples/common_components/protocol_examples_common for dependency "protocol_examples_common", specified in /home/mariem/AP_displayer/main/idf_component.yml
+NOTICE: Processing 5 dependencies:
+NOTICE: [1/5] espressif/cmake_utilities (0.5.3)
+NOTICE: [2/5] espressif/esp_lcd_ili9341 (1.2.0)
+NOTICE: [3/5] lvgl/lvgl (9.2.0)
+NOTICE: [4/5] protocol_examples_common (*) (/home/mariem/esp-idf/examples/common_components/protocol_examples_common)
+NOTICE: [5/5] idf (5.4.1)
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/mariem/AP_displayer -B/home/mariem/AP_displayer/build

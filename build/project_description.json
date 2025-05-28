@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "AP_displayer",
-    "project_version":    "72af358-dirty",
+    "project_version":    "7254cc0-dirty",
     "project_path":       "/home/mariem/AP_displayer",
     "idf_path":           "/home/mariem/esp-idf",
     "build_dir":          "/home/mariem/AP_displayer/build",
@@ -1236,11 +1236,11 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "esp_wifi", "nvs_flash", "spiffs", "vfs", "esp_netif", "espressif__esp_lcd_ili9341", "lvgl__lvgl", "protocol_examples_common" ],
+            "priv_reqs": [ "esp_wifi", "nvs_flash", "spiffs", "vfs", "esp_netif", "console", "espressif__esp_lcd_ili9341", "lvgl__lvgl", "protocol_examples_common" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__esp_lcd_ili9341", "lvgl__lvgl", "protocol_examples_common" ],
             "file": "/home/mariem/AP_displayer/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/mariem/AP_displayer/main/display_driver.c", "/home/mariem/AP_displayer/main/lists_lib.c", "/home/mariem/AP_displayer/main/main.c", "/home/mariem/AP_displayer/main/scan_app.c" ],
+            "sources": [ "/home/mariem/AP_displayer/main/console_commands.c", "/home/mariem/AP_displayer/main/display_driver.c", "/home/mariem/AP_displayer/main/lists_lib.c", "/home/mariem/AP_displayer/main/main.c", "/home/mariem/AP_displayer/main/scan_app.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -2917,7 +2917,7 @@
             "dir": "/home/mariem/AP_displayer/main",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "esp_wifi", "nvs_flash", "spiffs", "vfs", "esp_netif", "espressif__esp_lcd_ili9341", "lvgl__lvgl", "protocol_examples_common" ],
+            "priv_reqs": [ "esp_wifi", "nvs_flash", "spiffs", "vfs", "esp_netif", "console", "espressif__esp_lcd_ili9341", "lvgl__lvgl", "protocol_examples_common" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__esp_lcd_ili9341", "lvgl__lvgl", "protocol_examples_common" ],
             "include_dirs": [ "." ]
