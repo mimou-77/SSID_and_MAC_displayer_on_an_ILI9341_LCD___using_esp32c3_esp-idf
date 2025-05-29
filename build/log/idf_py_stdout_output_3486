@@ -1,0 +1,56 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/mariem/AP_displayer/build/bootloader/esp-idf/esptool_py && /home/mariem/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/mariem/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/mariem/AP_displayer/build/bootloader/bootloader.bin
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[2/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/console_commands.c.obj
+/home/mariem/AP_displayer/main/console_commands.c:145:13: warning: 'register_nok_list' defined but not used [-Wunused-function]
+  145 | static void register_nok_list()
+      |             ^~~~~~~~~~~~~~~~~
+[3/10] No install step for 'bootloader'
+[4/10] Completed 'bootloader'
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from /home/mariem/AP_displayer/main/main.c:3:
+/home/mariem/AP_displayer/main/display_driver.h:33:13: warning: 'notify_lvgl_flush_ready' declared 'static' but never defined [-Wunused-function]
+   33 | static bool notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io, esp_lcd_panel_io_event_data_t *data, void * user_ctx);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.h:34:13: warning: 'lvgl_flush_cb' declared 'static' but never defined [-Wunused-function]
+   34 | static void lvgl_flush_cb(lv_display_t * disp, const lv_area_t * area, uint8_t * px_map);
+      |             ^~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.h:35:13: warning: 'lvgl_port_update_callback' declared 'static' but never defined [-Wunused-function]
+   35 | static void lvgl_port_update_callback(lv_display_t *disp);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.h:36:13: warning: 'increase_lvgl_tick' declared 'static' but never defined [-Wunused-function]
+   36 | static void increase_lvgl_tick(void * arg);
+      |             ^~~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/display_driver.h:37:13: warning: 'lvgl_port_task' declared 'static' but never defined [-Wunused-function]
+   37 | static void lvgl_port_task(void * arg);
+      |             ^~~~~~~~~~~~~~
+In file included from /home/mariem/AP_displayer/main/main.c:5:
+/home/mariem/AP_displayer/main/console_commands.h:23:13: warning: 'register_restart' declared 'static' but never defined [-Wunused-function]
+   23 | static void register_restart();
+      |             ^~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/console_commands.h:24:12: warning: 'restart' declared 'static' but never defined [-Wunused-function]
+   24 | static int restart(int argc, char ** argv);
+      |            ^~~~~~~
+/home/mariem/AP_displayer/main/console_commands.h:26:13: warning: 'register_ok_list' declared 'static' but never defined [-Wunused-function]
+   26 | static void register_ok_list();
+      |             ^~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/console_commands.h:27:12: warning: 'ok_list' declared 'static' but never defined [-Wunused-function]
+   27 | static int ok_list(int argc, char ** argv);
+      |            ^~~~~~~
+/home/mariem/AP_displayer/main/console_commands.h:29:13: warning: 'register_nok_list' declared 'static' but never defined [-Wunused-function]
+   29 | static void register_nok_list();
+      |             ^~~~~~~~~~~~~~~~~
+/home/mariem/AP_displayer/main/console_commands.h:30:12: warning: 'nok_list' declared 'static' but never defined [-Wunused-function]
+   30 | static int nok_list(int argc, char ** argv);
+      |            ^~~~~~~~
+[6/10] Linking C static library esp-idf/main/libmain.a
+[7/10] Generating ld/sections.ld
+[8/10] Linking CXX executable AP_displayer.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/mariem/AP_displayer/build/AP_displayer.bin
+[10/10] cd /home/mariem/AP_displayer/build/esp-idf/esptool_py && /home/mariem/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/mariem/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/mariem/AP_displayer/build/partition_table/partition-table.bin /home/mariem/AP_displayer/build/AP_displayer.bin
+AP_displayer.bin binary size 0x1203a0 bytes. Smallest app partition is 0x200000 bytes. 0xdfc60 bytes (44%) free.
