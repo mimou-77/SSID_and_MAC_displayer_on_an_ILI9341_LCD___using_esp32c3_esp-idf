@@ -291,6 +291,8 @@ static int last_added_device(int argc, char ** argv)
         //put the last line in line[64]
         fgets(line, sizeof(line), ok_file); //naturally the last line ends with '\0'
         ESP_LOGI(TAG, "last added device %s", line);
+        ESP_LOGI(TAG, "device is ok");
+        
         
     }   
     else
@@ -351,7 +353,7 @@ static int last_added_device(int argc, char ** argv)
         //put the last line in line[64]
         fgets(line, sizeof(line), nok_file); //naturally the last line ends with '\0'
         ESP_LOGI(TAG, "last added device %s", line);
-        
+        ESP_LOGI(TAG, "device is nok");
 
         fclose(nok_file);
 
