@@ -75,7 +75,7 @@ void init_spiffs()
         ESP_LOGI(TAG, "partition size: total = %d, used = %d", total, used);
     }
 
-    //automatically classify device as ok or nok ↓
+    //automatically classify device as ok or nok ↓ ; also writes in file : last_device_in
     auto_classify_ok_nok();
 
 }
@@ -177,7 +177,7 @@ void auto_classify_ok_nok()
             ESP_LOGI(TAG, "device NOK");
             add_to_nok_list(mac_u);
         }
-        
+
     }
     
 
@@ -227,6 +227,24 @@ void auto_classify_ok_nok()
             add_to_nok_list(mac_u);
         }
     }
+
+
+    //auto_classify_ok_nok() calls add_to_ok_list or add_to_nok_list ; they modify the value of last_device_in_ok_list
+    //write value of last_device_in_ok_list in a file
+    FILE * last_device_in = fopen("/spiffs/last_device_in.csv", "a"); //mode append
+    if (last_device_in == NULL)
+    {
+        ESP_LOGI(TAG, "failed to open ok_list.csv");
+        return;
+    } 
+
+    fprintf(last_device_in, "1");
+    fprintf(last_device_in, last_device_in_ok_list == 1 ? "1":"0"); //=1 => in ok_list, else nok_list
+
+    
+    fclose(last_device_in);
+    
+
 }
 
 
@@ -248,7 +266,8 @@ void add_to_ok_list(char * _mac_u) //_mac_u ends with '\0' naturally => no probl
             {
                 device_in_ok_list = 1 ;
                 ESP_LOGI(TAG, "device already in ok_list.csv");
-                device_ok = 1; 
+                device_ok = 1;
+
             }
             
         }
@@ -267,7 +286,11 @@ void add_to_ok_list(char * _mac_u) //_mac_u ends with '\0' naturally => no probl
         fclose(ok_file);
         device_ok = 1; //extern in lists_lib.h ; used in display_driver.c to update ui
         ESP_LOGI(TAG, "device added to ok_list.csv");
+
+
     }
+
+    last_device_in_ok_list = 1; //will be used by the console command : last_added_device
     
 }
 
@@ -290,6 +313,8 @@ void add_to_nok_list(char * _mac_u) //_mac_u ends with '\0' naturally => no prob
                 device_in_nok_list = 1 ;
                 ESP_LOGI(TAG, "device already in nok_list.csv");
                 device_nok = 1;  
+
+                
             }
    
         }
@@ -308,7 +333,10 @@ void add_to_nok_list(char * _mac_u) //_mac_u ends with '\0' naturally => no prob
         fclose(nok_file);
         device_nok = 1; //extern in lists_lib.h ; used in display_driver.c to update ui
         ESP_LOGI(TAG, "device added to nok_list.csv");
+
     }
+
+    last_device_in_ok_list = 0; //will be used by the console command : last_added_device
     
 }
 

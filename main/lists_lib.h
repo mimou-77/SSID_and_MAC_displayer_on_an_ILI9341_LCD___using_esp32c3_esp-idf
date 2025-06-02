@@ -10,7 +10,9 @@
 /*-----------------------------------------------------------------------------------------------*/
 volatile extern char device_ok;
 volatile extern char device_nok;
+volatile extern char last_added_device_ok_nok[48];
 
+volatile extern char last_device_in_ok_list;
 
 
 /*-----------------------------------------------------------------------------------------------*/

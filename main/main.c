@@ -21,6 +21,10 @@ char char_supla_device_ssid[21] = {0} ;
 //declared extern in lists_lib.h ; modified by auto_classify_ok_nok ; used by display_driver.c/update_label_ok_nok
 volatile char device_ok = 0;
 volatile char device_nok = 0;
+//declared extern in lists_lib.h ; modified by lists_lib.c/add_to_ok_list() and lists_lib.c/add_to_nok_list()
+volatile char last_added_device_ok_nok[48] ="none"; //is a mac
+//declared extern in lists_lib.h ; will be used by the console command : last_added_device
+volatile char last_device_in_ok_list = 0; 
 
 
 int app_main(void)
@@ -75,7 +79,7 @@ int app_main(void)
     
     display_init();
 
-    init_spiffs(); //init spiffs + call auto_classify
+    init_spiffs(); //init spiffs + call auto_classify()
  
     update_label_ok_nok();
 
